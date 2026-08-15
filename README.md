@@ -1,4 +1,4 @@
-# Camp Crystal Creek — Murder Mystery Party App
+# Lalbagh Murder Mystery Party App
 
 Streamlit app for hosting a locked-guest murder mystery party: manage roles, post announcements, and share private guest links.
 
@@ -29,7 +29,7 @@ All content lives under `data/` as JSON (no database):
 |------|---------|
 | `event.json` | Party title, date, location, blurb |
 | `guests.json` | Locked guest list, emails, access codes, player assignments |
-| `characters.json` | Placeholder Camp Crystal Creek character deck |
+| `characters.json` | Lalbagh character & clue matrix (20 roles) |
 | `announcements.json` | In-app updates feed |
 | `host_script.json` | Host cheat sheet and round scripts |
 

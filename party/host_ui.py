@@ -58,7 +58,7 @@ def guest_link(code: str) -> str:
 
 def render_host() -> None:
     st.title("Host dashboard")
-    st.caption("Camp Crystal Creek — manage guests, roles, and party updates.")
+    st.caption("Lalbagh — manage guests, roles, and party updates.")
 
     tabs = st.tabs(
         [
@@ -316,10 +316,14 @@ def _characters_tab() -> None:
             if char.get("secret_motive"):
                 st.markdown(f"**Secret motive:** {char['secret_motive']}")
             if char.get("alibi"):
-                st.markdown(f"**Alibi:** {char['alibi']}")
+                st.markdown(f"**Claimed alibi (3:15–3:45 PM):** {char['alibi']}")
             if char.get("goal"):
                 st.markdown(f"**Goal:** {char['goal']}")
             st.markdown(f"**Whisper clue:** {char.get('whisper_clue')}")
+            if char.get("clue_target"):
+                st.markdown(f"**Clue targets:** {char['clue_target']}")
+            if char.get("deductive_purpose"):
+                st.markdown(f"**Deductive purpose:** {char['deductive_purpose']}")
             if char.get("may_lie"):
                 st.warning("This player may lie when asked direct questions.")
 

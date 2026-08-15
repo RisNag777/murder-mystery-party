@@ -1,4 +1,4 @@
-"""Camp Crystal Creek — murder mystery party app."""
+"""Lalbagh murder mystery party app."""
 
 from __future__ import annotations
 
@@ -14,15 +14,15 @@ from party.host_ui import render_host, require_host_login
 load_dotenv(Path(__file__).resolve().parent / ".env")
 
 st.set_page_config(
-    page_title="Camp Crystal Creek",
-    page_icon="🌲",
+    page_title="Lalbagh Murder Mystery",
+    page_icon="🌿",
     layout="wide",
     initial_sidebar_state="expanded",
 )
 
 
 def main() -> None:
-    st.sidebar.title("Camp Crystal Creek")
+    st.sidebar.title("Lalbagh Mystery")
     st.sidebar.caption("Murder mystery party")
 
     # Auto-open guest portal when a code is in the URL
