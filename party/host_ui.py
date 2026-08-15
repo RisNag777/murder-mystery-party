@@ -58,7 +58,7 @@ def guest_link(code: str) -> str:
 
 def render_host() -> None:
     st.title("Host dashboard")
-    st.caption("Lalbagh — manage guests, roles, and party updates.")
+    st.caption("The Lalbagh Glass House Mystery — manage guests, roles, and party updates.")
 
     tabs = st.tabs(
         [
@@ -324,15 +324,50 @@ def _characters_tab() -> None:
                 st.markdown(f"**Clue targets:** {char['clue_target']}")
             if char.get("deductive_purpose"):
                 st.markdown(f"**Deductive purpose:** {char['deductive_purpose']}")
+            if char.get("costume_note"):
+                st.markdown(f"**Costume note:** {char['costume_note']}")
             if char.get("may_lie"):
                 st.warning("This player may lie when asked direct questions.")
 
 
 def _script_tab() -> None:
-    st.markdown("### Host cheat sheet & scripts")
+    st.markdown("### Master host packet")
     script = load_host_script()
     if script.get("_note"):
         st.caption(script["_note"])
+
+    overview = script.get("overview") or {}
+    if overview:
+        st.markdown("#### Event overview")
+        for key, label in [
+            ("title", "Title"),
+            ("date_context", "Date & context"),
+            ("location", "Location"),
+            ("victim", "Victim"),
+            ("crime_scene", "Crime scene"),
+            ("murder_weapon", "Murder weapon"),
+            ("killer", "Killer"),
+            ("motive", "Motive"),
+        ]:
+            if overview.get(key):
+                st.markdown(f"**{label}:** {overview[key]}")
+
+    wraps = script.get("wrist_wrap_red_herrings") or []
+    if wraps:
+        st.markdown("#### Wrist-wrap red herrings")
+        st.caption("Keep Player 8 from being singled out on sight alone.")
+        for item in wraps:
+            st.markdown(
+                f"- **Player {item.get('player_id')}: {item.get('character')}** — {item.get('note')}"
+            )
+
+    timeline = script.get("timeline") or []
+    if timeline:
+        st.markdown("#### Timeline & movement map (3:00–3:45 PM)")
+        for block in timeline:
+            st.markdown(f"**{block.get('time')}**")
+            for event in block.get("events", []):
+                st.markdown(f"- {event}")
 
     st.markdown("#### Gameplay flow")
     for round_info in script.get("gameplay_flow", []):
@@ -352,12 +387,10 @@ def _script_tab() -> None:
         with st.expander(s.get("title", f"Script {s.get('id')}"), expanded=s.get("id") == 1):
             st.write(s.get("read_aloud", ""))
 
-    st.markdown("#### Accusation steps")
+    st.markdown("#### Reveal steps")
     for step in script.get("accusation_steps", []):
         st.markdown(f"- {step}")
 
     killer = character_by_id(load_characters().get("killer_player_id", 8))
     if killer:
-        st.error(
-            f"Reveal fallback: if the group votes wrong, have **{killer['title']}** confess."
-        )
+        st.error(f"Named killer: **{killer['title']}** (Player 8).")

@@ -1,62 +1,130 @@
 {
-  "_note": "Lalbagh host cheat sheet — aligned to the Master Character & Clue Matrix.",
+  "_note": "Finalized master host packet — The Lalbagh Glass House Mystery.",
+  "overview": {
+    "title": "The Lalbagh Glass House Mystery",
+    "date_context": "Set on August 31st, two weeks after the close of Lalbagh's annual Independence Day Flower Show (themed around the Western Ganga dynasty).",
+    "location": "The open lawn areas near the Glass House and Lalbagh Lake.",
+    "victim": "Basavanna, a meddlesome Bangalore socialite and gossip blogger.",
+    "crime_scene": "Basavanna’s broken black umbrella and spilled brass tumbler of filter coffee found near the lake path.",
+    "murder_weapon": "A curved sickle used for harvesting coconuts and garden maintenance.",
+    "killer": "Player 8 (The Tender Coconut Vendor).",
+    "motive": "The Coconut Vendor is secretly the Gandhinagar Diamond Smuggler, an old fugitive who fled custody in the late 1990s. Basavanna recognized their face from a recent Deccan Herald retrospective running on the 26th anniversary of Veerappan kidnapping Dr. Rajkumar and threatened to call the police that evening."
+  },
+  "wrist_wrap_red_herrings": [
+    {
+      "player_id": 2,
+      "character": "Marathon Runner",
+      "note": "Wears an athletic sweatband/wrap for workout support."
+    },
+    {
+      "player_id": 7,
+      "character": "Street Photographer",
+      "note": "Wears a leather/cloth camera strap wrapped around their wrist."
+    },
+    {
+      "player_id": 8,
+      "character": "Coconut Vendor",
+      "note": "Wears a tight cloth wrap hiding their criminal skull tattoo."
+    }
+  ],
+  "timeline": [
+    {
+      "time": "3:00 PM – 3:15 PM",
+      "events": [
+        "Basavanna confronts vendors near the North Gate fruit row with a newspaper clipping."
+      ]
+    },
+    {
+      "time": "3:15 PM",
+      "events": [
+        "Player 16 sees Player 1 arguing with Basavanna near the Glass House."
+      ]
+    },
+    {
+      "time": "3:20 PM",
+      "events": [
+        "Player 18 sees Player 6 sneak out of their car to hide a metal briefcase under an unattended fruit cart near the lake path."
+      ]
+    },
+    {
+      "time": "3:25 PM",
+      "events": [
+        "Player 19 sees Player 1 trying to lock the maintenance shed from the outside."
+      ]
+    },
+    {
+      "time": "3:30 PM (CRIME WINDOW)",
+      "events": [
+        "Basavanna vanishes near the storage shed / lake path.",
+        "Player 8 leaves their cart unattended for 20 minutes (seen by Player 13).",
+        "Player 3 hides wiped garden shears in a hollowed-out tree trunk (seen by Player 17).",
+        "Player 5 is taking a board call near the Lotus Pond (heard screaming near the lake by Player 4).",
+        "Player 7 is changing camera lenses near the lake path."
+      ]
+    },
+    {
+      "time": "3:15 PM – 3:45 PM (ALIBI WINDOWS)",
+      "events": [
+        "Player 2 leads a public stretch session on the grass opposite the hill (verified by Player 15).",
+        "Player 4 drinks tea at the West Gate stall with the Morning Walker Club (verified by Player 11)."
+      ]
+    }
+  ],
   "gameplay_flow": [
     {
       "round": 1,
-      "name": "Initial Alibis",
+      "name": "Opening / Initial Alibis",
       "duration": "15 minutes",
       "steps": [
-        "Gather in a circle. Read Script #1.",
-        "Every suspect (Players 1–8) introduces themselves and states their claimed alibi for 3:15–3:45 PM.",
-        "Investigators introduce themselves and note they hold whisper clues."
+        "Gather in a circle. Read Round 1 Script.",
+        "Players open envelopes, introduce characters, and state where they claim to have been at 3:30 PM."
       ]
     },
     {
       "round": 2,
       "name": "Whisper Mingling",
-      "duration": "20–25 minutes",
+      "duration": "20 minutes",
       "steps": [
-        "Blow whistle / call attention. Read Script #2.",
-        "Players mingle in small groups of 2–3 and trade rumor clues."
+        "Call attention. Read Round 2 Script.",
+        "Guests scatter across the lawn in groups of 2–3 and trade whisper clues."
       ]
     },
     {
       "round": 3,
-      "name": "Final Accusation & Reveal",
+      "name": "Final Reveal",
       "duration": "15–20 minutes",
       "steps": [
-        "Call everyone back. Read Script #3 (incident summary).",
-        "Hand out voting paper → Tally votes → Coconut Vendor confesses if needed!"
+        "Optional: brief debate and/or vote before the reveal.",
+        "Call everyone back. Read Round 3 Script (forensics + clear red herrings + name the killer).",
+        "Have Player 8, The Tender Coconut Vendor, confess."
       ]
     }
   ],
   "setup": [
-    "Hand each guest a sealed envelope containing their assigned card (Player 1 through 20).",
-    "Give everyone a name tag with their character title (e.g., \"Player 8: Tender Coconut Vendor\")."
+    "Print character cards, cut along dashed lines, and seal each inside a numbered envelope (Players 1–20).",
+    "Give everyone a name tag with their character title (e.g., \"Player 8: The Tender Coconut Vendor\").",
+    "Remind Players 2, 7, and 8 to wear wrist wraps/bands so the tattoo clue is not a giveaway on sight alone."
   ],
   "scripts": [
     {
       "id": 1,
-      "title": "Round 1 — The Discovery",
-      "read_aloud": "Welcome to Lalbagh Botanical Gardens! The flower show crowds are thinning, but we have a terrible tragedy. Basavanna has been found dead near the fruit rows—and a killer is standing in this circle right now. The critical window is 3:15 to 3:45 PM. Open your envelopes. Go around the circle, introduce your character, and if you are a suspect, state where you claim to have been during that window."
+      "title": "Round 1 — Opening",
+      "read_aloud": "Welcome to Lalbagh Botanical Garden! It’s August 31st, two weeks after the close of our Independence Day Flower Show and its Western Ganga dynasty displays. But a crime has taken place. Basavanna, our local socialite and gossip blogger, has vanished near the lake path—leaving behind only a broken black umbrella and a spilled tumbler of filter coffee. The culprit is standing in this circle right now.\n\nOpen your envelopes. Go around the circle, introduce your character, and state where you claim to have been at 3:30 PM today."
     },
     {
       "id": 2,
-      "title": "Round 2 — Information Exchange",
-      "read_aloud": "Listen up! Everyone here knows something. Every single person holds a critical piece of information or rumor. You now have 20 minutes to form small gossip groups of 2 or 3 and trade your secret clues. Remember: only the killer is allowed to lie when asked direct questions. Everyone else must tell the truth about what they saw or heard!"
+      "title": "Round 2 — Whisper Mingling",
+      "read_aloud": "Listen up, everyone! No physical clues are hidden in the grass, but everyone here holds a critical piece of the story. You have 20 minutes to scatter across the lawn, form small gossip groups of 2 or 3, and trade your secret whisper clues.\n\nRemember: only the true killer is allowed to lie when asked direct questions. Everyone else must tell the absolute truth about what they saw or heard!"
     },
     {
       "id": 3,
-      "title": "Round 3 — The Summary & Accusation",
-      "read_aloud": "Time is up! Park security just shared the working incident report: 'Basavanna was killed with a fruit-cutting blade during the afternoon rush. A Deccan Herald clipping about the Gandhinagar Diamond Smuggler—described as having a dark wrist tattoo—was found near the body. Witnesses place Basavanna confronting a fruit-cart vendor and trying to call the police. One coconut stall was reportedly unattended around 3:30 PM.'"
+      "title": "Round 3 — The Final Reveal",
+      "read_aloud": "Time is up! The Inspector from the local police station just radioed in the official forensics report:\n\n'Basavanna was attacked behind the storage shed with a curved fruit-cutting sickle stolen from the fruit stall crates.\n\nFurthermore, evidence reveals Basavanna was carrying a Deccan Herald retrospective on famous Bangalore criminals published on the 26th anniversary of Veerappan kidnapping Rajkumar. That article exposed the true face of the Gandhinagar Diamond Smuggler—who carries a distinct skull tattoo on their right wrist!'\n\nBefore we name the killer, let's clear up our suspicious park visitors:\n\nThe NRI Investor was spotted sneaking out of their car to hide a metal briefcase of illegal land deeds underneath an unattended fruit cart.\n\nThe Botanist was caught hiding garden shears in a hollowed-out tree trunk after destroying smuggled orchids.\n\nThe Coordinator was locking the shed to hide broken Western Ganga display materials.\n\nNone of them committed the attack. Only ONE person was seen being confronted over the Deccan Herald article at a fruit cart, had an unattended stall at 3:30 PM, and wears a tight cloth wrap around their right wrist to hide their criminal tattoo: Player 8, The Tender Coconut Vendor!"
     }
   ],
   "accusation_steps": [
-    "Give guests 3 minutes to debate their theories in the circle.",
-    "Hand out small scraps of paper and pens.",
-    "Have every guest write down the name of the person they believe is the killer.",
-    "Tally the votes.",
-    "Announce the suspect with the most votes. Have them step forward and state whether they are guilty!",
-    "If the group voted incorrectly, have the Tender Coconut Vendor step forward to confess to the crime!"
+    "Optional: give guests 3 minutes to debate theories and/or vote on paper.",
+    "Read Round 3 Script aloud to clear red herrings and name the killer.",
+    "Have The Tender Coconut Vendor (Player 8) step forward and confess."
   ]
 }

@@ -1,4 +1,4 @@
-# Lalbagh Murder Mystery Party App
+# The Lalbagh Glass House Mystery
 
 Streamlit app for hosting a locked-guest murder mystery party: manage roles, post announcements, and share private guest links.
 

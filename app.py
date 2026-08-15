@@ -1,4 +1,4 @@
-"""Lalbagh murder mystery party app."""
+"""The Lalbagh Glass House Mystery party app."""
 
 from __future__ import annotations
 
@@ -14,7 +14,7 @@ from party.host_ui import render_host, require_host_login
 load_dotenv(Path(__file__).resolve().parent / ".env")
 
 st.set_page_config(
-    page_title="Lalbagh Murder Mystery",
+    page_title="The Lalbagh Glass House Mystery",
     page_icon="🌿",
     layout="wide",
     initial_sidebar_state="expanded",
@@ -22,8 +22,8 @@ st.set_page_config(
 
 
 def main() -> None:
-    st.sidebar.title("Lalbagh Mystery")
-    st.sidebar.caption("Murder mystery party")
+    st.sidebar.title("Glass House Mystery")
+    st.sidebar.caption("Lalbagh murder mystery party")
 
     # Auto-open guest portal when a code is in the URL
     params = st.query_params

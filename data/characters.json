@@ -1,8 +1,10 @@
 {
-  "_note": "Lalbagh printable character cards (1–20) — edit this file to change the story without code changes.",
-  "theme": "Lalbagh Botanical Gardens",
-  "victim": "Basavanna",
-  "time_window": "3:15–3:45 PM",
+  "_note": "Finalized printable character cards for The Lalbagh Glass House Mystery.",
+  "theme": "The Lalbagh Glass House Mystery",
+  "victim": "Basavanna, a meddlesome Bangalore socialite and gossip blogger",
+  "crime_scene": "Broken black umbrella and spilled brass tumbler of filter coffee near the lake path",
+  "murder_weapon": "Curved sickle used for harvesting coconuts and garden maintenance",
+  "time_window": "3:15–3:45 PM (crime window ~3:30 PM)",
   "killer_player_id": 8,
   "host_rules": [
     "Guests 1–8 are the primary suspects (including the Tender Coconut Vendor, who is the secret killer).",
@@ -36,6 +38,7 @@
       "whisper_clue": "I saw the Filter Coffee Vendor cursing out Basavanna face-to-face near the Silk Cotton Tree earlier today!",
       "clue_target": "Coffee Vendor",
       "deductive_purpose": "Establishes petty review dispute",
+      "costume_note": "Wears an athletic sweatband/wrap for workout support (wrist-wrap red herring).",
       "goal": null,
       "may_lie": false
     },
@@ -105,7 +108,8 @@
       "alibi": "You claim you were changing camera lenses near the lake path at 3:30 PM.",
       "whisper_clue": "The Coconut Vendor always wears a tight cloth wrap around their right wrist, even on extremely hot August days.",
       "clue_target": "Coconut Vendor",
-      "deductive_purpose": "Physical Evidence (Hides Tattoo)",
+      "deductive_purpose": "Physical Feature Evidence",
+      "costume_note": "Wears a leather/cloth camera strap wrapped around their wrist (wrist-wrap red herring).",
       "goal": null,
       "may_lie": false
     },
@@ -119,7 +123,8 @@
       "alibi": "You lie and say you were continuously at your cart chopping Elaneer (coconuts) near the North Gate from 3:15 to 3:45 PM. (You may LIE if asked direct questions!)",
       "whisper_clue": "I saw the Hopcoms Juice Vendor wiping down a heavy blade near their fruit crates right around 3:30 PM! (Strategic lie shifting blame)",
       "clue_target": "Hopcoms Vendor",
-      "deductive_purpose": "Killer's Lie (Framing Hopcoms)",
+      "deductive_purpose": "Killer's Lie",
+      "costume_note": "Wears a tight cloth wrap hiding their criminal skull tattoo.",
       "goal": null,
       "may_lie": true
     },
