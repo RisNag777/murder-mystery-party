@@ -1,0 +1,61 @@
+{
+  "_note": "PLACEHOLDER host cheat sheet — replace when you finalize the party script.",
+  "gameplay_flow": [
+    {
+      "round": 1,
+      "name": "Initial Alibis",
+      "duration": "15 minutes",
+      "steps": [
+        "Gather in a circle. Read Script #1.",
+        "Every player introduces themselves and states their Alibi."
+      ]
+    },
+    {
+      "round": 2,
+      "name": "Whisper Mingling",
+      "duration": "20–25 minutes",
+      "steps": [
+        "Blow whistle. Read Script #2.",
+        "Players walk around trading rumor clues in small groups."
+      ]
+    },
+    {
+      "round": 3,
+      "name": "Final Accusation & Reveal",
+      "duration": "15–20 minutes",
+      "steps": [
+        "Call everyone back. Read Script #3 (Autopsy Report).",
+        "Hand out voting paper → Tally votes → Chef confesses if needed!"
+      ]
+    }
+  ],
+  "setup": [
+    "Hand each guest a sealed envelope containing their assigned card (Player 1 through 20).",
+    "Give everyone a name tag with their character title (e.g., \"Player 8: The Chef\")."
+  ],
+  "scripts": [
+    {
+      "id": 1,
+      "title": "Round 1 — The Discovery",
+      "read_aloud": "Welcome to Camp Crystal Creek! The sun is setting over the trees, but we have a terrible tragedy. Biff, our head lifeguard, is missing—his blood-stained life vest and whistle were found by the lake. A killer is standing in this circle right now. Open your envelopes. Go around the circle, introduce your character, and state where you claim to have been at 8:00 PM tonight."
+    },
+    {
+      "id": 2,
+      "title": "Round 2 — Information Exchange",
+      "read_aloud": "Everyone sit up! No physical evidence was left behind in the grass, but everyone here knows something. Every single person holds a critical piece of information or rumor. You now have 20 minutes to scatter across the field, form small gossip groups of 2 or 3, and trade your secret clues. Remember: only the killer is allowed to lie when asked direct questions. Everyone else must tell the truth about what they saw or heard!"
+    },
+    {
+      "id": 3,
+      "title": "Round 3 — The Autopsy & Accusation",
+      "read_aloud": "Time is up! The Park Rangers just radioed in the official autopsy report: 'Biff was struck from behind by a heavy wooden rolling pin stolen from the kitchen. Traces of baking flour and heavy kitchen boot footprints were found at the scene. Furthermore, Biff had recently discovered an old 1976 news clipping revealing the true identity of the Camp Slasher, who bears a distinct skull tattoo on their forearm.'"
+    }
+  ],
+  "accusation_steps": [
+    "Give guests 3 minutes to debate their theories in the circle.",
+    "Hand out small scraps of paper and pens.",
+    "Have every guest write down the name of the person they believe is the killer.",
+    "Tally the votes.",
+    "Announce the suspect with the most votes. Have them step forward and state whether they are guilty!",
+    "If the group voted incorrectly, have The Chef step forward to confess to the crime!"
+  ]
+}
