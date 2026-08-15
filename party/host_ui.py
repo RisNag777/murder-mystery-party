@@ -115,7 +115,7 @@ def _guests_tab() -> None:
     chars = {c["player_id"]: c for c in deck.get("characters", [])}
 
     st.info(
-        f"Player {killer_id} is the secret killer (**{chars.get(killer_id, {}).get('title', 'unknown')}**). "
+        f"**{chars.get(killer_id, {}).get('title', 'Unknown')}** is the secret killer. "
         "Only you see that here — guests never see who the killer is."
     )
 
@@ -145,7 +145,7 @@ def _guests_tab() -> None:
             "email": st.column_config.TextColumn("Email"),
             "access_code": st.column_config.TextColumn("Access code", disabled=True),
             "player_id": st.column_config.NumberColumn(
-                "Player #", min_value=0, max_value=20, step=1, help="0 = unassigned"
+                "Card #", min_value=0, max_value=20, step=1, help="0 = unassigned; used only for role assignment"
             ),
             "attending": st.column_config.CheckboxColumn("Attending"),
             "character": st.column_config.TextColumn("Character", disabled=True),
@@ -305,7 +305,7 @@ def _characters_tab() -> None:
     for char in deck.get("characters", []):
         pid = char["player_id"]
         guest = guests.get(pid)
-        label = f"Player {pid}: {char['title']}"
+        label = char["title"]
         if char.get("is_killer"):
             label += "  — KILLER"
         if guest:
@@ -355,11 +355,9 @@ def _script_tab() -> None:
     wraps = script.get("wrist_wrap_red_herrings") or []
     if wraps:
         st.markdown("#### Wrist-wrap red herrings")
-        st.caption("Keep Player 8 from being singled out on sight alone.")
+        st.caption("Keep The Tender Coconut Vendor from being singled out on sight alone.")
         for item in wraps:
-            st.markdown(
-                f"- **Player {item.get('player_id')}: {item.get('character')}** — {item.get('note')}"
-            )
+            st.markdown(f"- **{item.get('character')}** — {item.get('note')}")
 
     timeline = script.get("timeline") or []
     if timeline:
@@ -393,4 +391,4 @@ def _script_tab() -> None:
 
     killer = character_by_id(load_characters().get("killer_player_id", 8))
     if killer:
-        st.error(f"Named killer: **{killer['title']}** (Player 8).")
+        st.error(f"Named killer: **{killer['title']}**.")

@@ -7,23 +7,23 @@
     "victim": "Basavanna, a meddlesome Bangalore socialite and gossip blogger.",
     "crime_scene": "Basavanna’s broken black umbrella and spilled brass tumbler of filter coffee found near the lake path.",
     "murder_weapon": "A curved sickle used for harvesting coconuts and garden maintenance.",
-    "killer": "Player 8 (The Tender Coconut Vendor).",
+    "killer": "The Tender Coconut Vendor.",
     "motive": "The Coconut Vendor is secretly the Gandhinagar Diamond Smuggler, an old fugitive who fled custody in the late 1990s. Basavanna recognized their face from a recent Deccan Herald retrospective running on the 26th anniversary of Veerappan kidnapping Dr. Rajkumar and threatened to call the police that evening."
   },
   "wrist_wrap_red_herrings": [
     {
       "player_id": 2,
-      "character": "Marathon Runner",
+      "character": "The Marathon Runner",
       "note": "Wears an athletic sweatband/wrap for workout support."
     },
     {
       "player_id": 7,
-      "character": "Street Photographer",
+      "character": "The Street Photographer",
       "note": "Wears a leather/cloth camera strap wrapped around their wrist."
     },
     {
       "player_id": 8,
-      "character": "Coconut Vendor",
+      "character": "The Tender Coconut Vendor",
       "note": "Wears a tight cloth wrap hiding their criminal skull tattoo."
     }
   ],
@@ -37,36 +37,36 @@
     {
       "time": "3:15 PM",
       "events": [
-        "Player 16 sees Player 1 arguing with Basavanna near the Glass House."
+        "The College Botany Student sees The Overworked Flower Show Coordinator arguing with Basavanna near the Glass House."
       ]
     },
     {
       "time": "3:20 PM",
       "events": [
-        "Player 18 sees Player 6 sneak out of their car to hide a metal briefcase under an unattended fruit cart near the lake path."
+        "The Lalbagh Lake Duck-Boat Operator sees The Wealthy NRI Investor sneak out of their car to hide a metal briefcase under an unattended fruit cart near the lake path."
       ]
     },
     {
       "time": "3:25 PM",
       "events": [
-        "Player 19 sees Player 1 trying to lock the maintenance shed from the outside."
+        "The Maintenance Lawnmower Operator sees The Overworked Flower Show Coordinator trying to lock the maintenance shed from the outside."
       ]
     },
     {
       "time": "3:30 PM (CRIME WINDOW)",
       "events": [
         "Basavanna vanishes near the storage shed / lake path.",
-        "Player 8 leaves their cart unattended for 20 minutes (seen by Player 13).",
-        "Player 3 hides wiped garden shears in a hollowed-out tree trunk (seen by Player 17).",
-        "Player 5 is taking a board call near the Lotus Pond (heard screaming near the lake by Player 4).",
-        "Player 7 is changing camera lenses near the lake path."
+        "The Tender Coconut Vendor leaves their cart unattended for 20 minutes (seen by The Mango Stall Vendor).",
+        "The Self-Proclaimed Botanist hides wiped garden shears in a hollowed-out tree trunk (seen by The Sketch Artist).",
+        "The Tech Startup Founder is taking a board call near the Lotus Pond (heard screaming near the lake by The Filter Coffee Vendor).",
+        "The Street Photographer is changing camera lenses near the lake path."
       ]
     },
     {
       "time": "3:15 PM – 3:45 PM (ALIBI WINDOWS)",
       "events": [
-        "Player 2 leads a public stretch session on the grass opposite the hill (verified by Player 15).",
-        "Player 4 drinks tea at the West Gate stall with the Morning Walker Club (verified by Player 11)."
+        "The Marathon Runner leads a public stretch session on the grass opposite the hill (verified by The Yoga Instructor).",
+        "The Filter Coffee Vendor drinks tea at the West Gate stall with the Morning Walker Club (verified by The Morning Walker Club President)."
       ]
     }
   ],
@@ -77,7 +77,7 @@
       "duration": "15 minutes",
       "steps": [
         "Gather in a circle. Read Round 1 Script.",
-        "Players open envelopes, introduce characters, and state where they claim to have been at 3:30 PM."
+        "Guests open envelopes, introduce characters, and state where they claim to have been at 3:30 PM."
       ]
     },
     {
@@ -96,14 +96,14 @@
       "steps": [
         "Optional: brief debate and/or vote before the reveal.",
         "Call everyone back. Read Round 3 Script (forensics + clear red herrings + name the killer).",
-        "Have Player 8, The Tender Coconut Vendor, confess."
+        "Have The Tender Coconut Vendor confess."
       ]
     }
   ],
   "setup": [
-    "Print character cards, cut along dashed lines, and seal each inside a numbered envelope (Players 1–20).",
-    "Give everyone a name tag with their character title (e.g., \"Player 8: The Tender Coconut Vendor\").",
-    "Remind Players 2, 7, and 8 to wear wrist wraps/bands so the tattoo clue is not a giveaway on sight alone."
+    "Print character cards, cut along dashed lines, and seal each inside an envelope labeled with the character title.",
+    "Give everyone a name tag with their character title (e.g., \"The Tender Coconut Vendor\").",
+    "Remind The Marathon Runner, The Street Photographer, and The Tender Coconut Vendor to wear wrist wraps/bands so the tattoo clue is not a giveaway on sight alone."
   ],
   "scripts": [
     {
@@ -119,12 +119,12 @@
     {
       "id": 3,
       "title": "Round 3 — The Final Reveal",
-      "read_aloud": "Time is up! The Inspector from the local police station just radioed in the official forensics report:\n\n'Basavanna was attacked behind the storage shed with a curved fruit-cutting sickle stolen from the fruit stall crates.\n\nFurthermore, evidence reveals Basavanna was carrying a Deccan Herald retrospective on famous Bangalore criminals published on the 26th anniversary of Veerappan kidnapping Rajkumar. That article exposed the true face of the Gandhinagar Diamond Smuggler—who carries a distinct skull tattoo on their right wrist!'\n\nBefore we name the killer, let's clear up our suspicious park visitors:\n\nThe NRI Investor was spotted sneaking out of their car to hide a metal briefcase of illegal land deeds underneath an unattended fruit cart.\n\nThe Botanist was caught hiding garden shears in a hollowed-out tree trunk after destroying smuggled orchids.\n\nThe Coordinator was locking the shed to hide broken Western Ganga display materials.\n\nNone of them committed the attack. Only ONE person was seen being confronted over the Deccan Herald article at a fruit cart, had an unattended stall at 3:30 PM, and wears a tight cloth wrap around their right wrist to hide their criminal tattoo: Player 8, The Tender Coconut Vendor!"
+      "read_aloud": "Time is up! The Inspector from the local police station just radioed in the official forensics report:\n\n'Basavanna was attacked behind the storage shed with a curved fruit-cutting sickle stolen from the fruit stall crates.\n\nFurthermore, evidence reveals Basavanna was carrying a Deccan Herald retrospective on famous Bangalore criminals published on the 26th anniversary of Veerappan kidnapping Rajkumar. That article exposed the true face of the Gandhinagar Diamond Smuggler—who carries a distinct skull tattoo on their right wrist!'\n\nBefore we name the killer, let's clear up our suspicious park visitors:\n\nThe NRI Investor was spotted sneaking out of their car to hide a metal briefcase of illegal land deeds underneath an unattended fruit cart.\n\nThe Botanist was caught hiding garden shears in a hollowed-out tree trunk after destroying smuggled orchids.\n\nThe Coordinator was locking the shed to hide broken Western Ganga display materials.\n\nNone of them committed the attack. Only ONE person was seen being confronted over the Deccan Herald article at a fruit cart, had an unattended stall at 3:30 PM, and wears a tight cloth wrap around their right wrist to hide their criminal tattoo: The Tender Coconut Vendor!"
     }
   ],
   "accusation_steps": [
     "Optional: give guests 3 minutes to debate theories and/or vote on paper.",
     "Read Round 3 Script aloud to clear red herrings and name the killer.",
-    "Have The Tender Coconut Vendor (Player 8) step forward and confess."
+    "Have The Tender Coconut Vendor step forward and confess."
   ]
 }

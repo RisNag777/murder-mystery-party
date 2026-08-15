@@ -78,7 +78,7 @@ def render_guest() -> None:
         st.error("Character data missing for your assignment. Tell the host.")
         return
 
-    st.markdown(f"#### Player {pid}: {char.get('title')}")
+    st.markdown(f"#### {char.get('title')}")
     st.markdown(f"**Role:** {char.get('role')}")
 
     if char.get("type") == "suspect":

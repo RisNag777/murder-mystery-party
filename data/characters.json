@@ -7,9 +7,9 @@
   "time_window": "3:15–3:45 PM (crime window ~3:30 PM)",
   "killer_player_id": 8,
   "host_rules": [
-    "Guests 1–8 are the primary suspects (including the Tender Coconut Vendor, who is the secret killer).",
-    "Guests 9–20 are investigators who hold eyewitness clues, solid alibis, and red herrings.",
-    "If fewer than 20 people show up, hand out cards 1 through 8 first, then distribute investigator cards 9–20 in numerical order.",
+    "Primary suspects include The Overworked Flower Show Coordinator through The Tender Coconut Vendor (the secret killer).",
+    "Investigators (The Bird Watcher through The Bench-Sitting Senior Citizen) hold eyewitness clues, solid alibis, and red herrings.",
+    "If fewer than 20 people show up, assign primary suspect cards first, then investigator cards.",
     "Clue window for claimed alibis is 3:15–3:45 PM. Only the killer may lie when asked direct questions."
   ],
   "characters": [
@@ -208,7 +208,7 @@
       "alibi": null,
       "whisper_clue": "I found a torn page from the Deccan Herald retrospective edition near the lake. It described the wanted diamond smuggler as having a dark skull tattoo on their right wrist.",
       "clue_target": "Fugitive Story",
-      "deductive_purpose": "Corroborates P7 wrist wrap clue",
+      "deductive_purpose": "Corroborates The Street Photographer wrist wrap clue",
       "goal": "Mingle with everyone, trade your secret rumor, and figure out who attacked Basavanna!",
       "may_lie": false
     },
