@@ -102,6 +102,9 @@ def _render_character_tab(guest: dict) -> None:
 
     st.markdown(f"### {char.get('title')}")
     st.markdown(f"**Role:** {char.get('role')}")
+    accessory = (guest.get("accessory") or char.get("costume_note") or "").strip()
+    if accessory:
+        st.info(f"**Costume / accessory:** {accessory}")
 
     if char.get("type") == "suspect":
         if char.get("secret_motive"):

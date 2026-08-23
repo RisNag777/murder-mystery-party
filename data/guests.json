@@ -9,13 +9,15 @@
     "name": "Ankush",
     "access_code": "XLBX",
     "player_id": 2,
-    "attending": true
+    "attending": true,
+    "accessory": "Sweatband on right wrist"
   },
   {
     "name": "Vivek",
     "access_code": "D7DH",
     "player_id": 3,
-    "attending": true
+    "attending": true,
+    "accessory": "Handkerchief (in pocket but visible or tied around right wrist)"
   },
   {
     "name": "Ajay",
@@ -27,13 +29,15 @@
     "name": "Shruti",
     "access_code": "736V",
     "player_id": 5,
-    "attending": true
+    "attending": true,
+    "accessory": "Smart Watch or Fitness Wristband on right wrist"
   },
   {
     "name": "Shriya",
     "access_code": "GG2G",
     "player_id": 6,
-    "attending": true
+    "attending": true,
+    "accessory": "Sunglasses on head"
   },
   {
     "name": "Gautham",
@@ -45,13 +49,15 @@
     "name": "Shreya",
     "access_code": "T3KV",
     "player_id": 8,
-    "attending": true
+    "attending": true,
+    "accessory": "Cloth tied on right wrist"
   },
   {
     "name": "Rohit",
     "access_code": "46KE",
     "player_id": 9,
-    "attending": true
+    "attending": true,
+    "accessory": "Hat"
   },
   {
     "name": "Anusha",
@@ -75,7 +81,8 @@
     "name": "Naresh",
     "access_code": "MVQF",
     "player_id": 13,
-    "attending": true
+    "attending": true,
+    "accessory": "Tote Bag"
   },
   {
     "name": "Nidhi",

@@ -10,21 +10,63 @@
     "killer": "The Tender Coconut Vendor.",
     "motive": "The Coconut Vendor is secretly the Gandhinagar Diamond Smuggler, an old fugitive who fled custody in the late 1990s. Basavanna recognized their face from a recent Deccan Herald retrospective running on the 26th anniversary of Veerappan kidnapping Dr. Rajkumar and threatened to call the police that evening."
   },
+  "accessories": [
+    {
+      "guest": "Ankush",
+      "character": "The Marathon Runner",
+      "accessory": "Sweatband on right wrist"
+    },
+    {
+      "guest": "Vivek",
+      "character": "The Self-Proclaimed Botanist",
+      "accessory": "Handkerchief (in pocket but visible or tied around right wrist)"
+    },
+    {
+      "guest": "Shruti",
+      "character": "The Tech Startup Founder",
+      "accessory": "Smart Watch or Fitness Wristband on right wrist"
+    },
+    {
+      "guest": "Shriya",
+      "character": "The Wealthy NRI Investor",
+      "accessory": "Sunglasses on head"
+    },
+    {
+      "guest": "Shreya",
+      "character": "The Tender Coconut Vendor",
+      "accessory": "Cloth tied on right wrist"
+    },
+    {
+      "guest": "Rohit",
+      "character": "The Bird Watcher",
+      "accessory": "Hat"
+    },
+    {
+      "guest": "Naresh",
+      "character": "The Mango Stall Vendor",
+      "accessory": "Tote Bag"
+    }
+  ],
   "wrist_wrap_red_herrings": [
     {
       "player_id": 2,
       "character": "The Marathon Runner",
-      "note": "Wears an athletic sweatband/wrap for workout support."
+      "note": "Sweatband on right wrist (red herring for the tattoo clue)."
     },
     {
-      "player_id": 7,
-      "character": "The Street Photographer",
-      "note": "Wears a leather/cloth camera strap wrapped around their wrist."
+      "player_id": 3,
+      "character": "The Self-Proclaimed Botanist",
+      "note": "Handkerchief visible or tied on right wrist (red herring for the tattoo clue)."
+    },
+    {
+      "player_id": 5,
+      "character": "The Tech Startup Founder",
+      "note": "Smart watch / fitness band on right wrist (red herring for the tattoo clue)."
     },
     {
       "player_id": 8,
       "character": "The Tender Coconut Vendor",
-      "note": "Wears a tight cloth wrap hiding their criminal skull tattoo."
+      "note": "Cloth tied on right wrist — hides the criminal skull tattoo."
     }
   ],
   "timeline": [
@@ -103,7 +145,8 @@
   "setup": [
     "Print character cards, cut along dashed lines, and seal each inside an envelope labeled with the character title.",
     "Give everyone a name tag with their character title (e.g., \"The Tender Coconut Vendor\").",
-    "Remind The Marathon Runner, The Street Photographer, and The Tender Coconut Vendor to wear wrist wraps/bands so the tattoo clue is not a giveaway on sight alone."
+    "Remind accessory guests to wear their props: Ankush (sweatband), Vivek (handkerchief), Shruti (smart watch/fitness band), Shriya (sunglasses on head), Shreya (cloth on right wrist), Rohit (hat), Naresh (tote bag).",
+    "Several right-wrist items exist so The Tender Coconut Vendor’s cloth wrap is not an obvious giveaway for the tattoo clue."
   ],
   "scripts": [
     {

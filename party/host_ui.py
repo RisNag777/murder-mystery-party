@@ -127,6 +127,7 @@ def _guests_tab() -> None:
                 "access_code": g.get("access_code", ""),
                 "player_id": pid if pid is not None else 0,
                 "attending": bool(g.get("attending", True)),
+                "accessory": g.get("accessory", "") or "",
                 "character": char.get("title", "—"),
                 "type": char.get("type", "—"),
                 "is_killer": bool(char.get("is_killer")),
@@ -144,6 +145,7 @@ def _guests_tab() -> None:
                 "Card #", min_value=0, max_value=20, step=1, help="0 = unassigned; used only for role assignment"
             ),
             "attending": st.column_config.CheckboxColumn("Attending"),
+            "accessory": st.column_config.TextColumn("Accessory"),
             "character": st.column_config.TextColumn("Character", disabled=True),
             "type": st.column_config.TextColumn("Type", disabled=True),
             "is_killer": st.column_config.CheckboxColumn("Killer?", disabled=True),
@@ -164,14 +166,20 @@ def _guests_tab() -> None:
                 if not code or code == "nan":
                     code = generate_access_code()
                 pid = int(row["player_id"]) if pd.notna(row["player_id"]) else 0
-                new_guests.append(
-                    {
-                        "name": name,
-                        "access_code": code,
-                        "player_id": pid if pid > 0 else None,
-                        "attending": bool(row["attending"]),
-                    }
-                )
+                accessory = ""
+                if "accessory" in row and pd.notna(row["accessory"]):
+                    accessory = str(row["accessory"]).strip()
+                    if accessory == "nan":
+                        accessory = ""
+                guest_row = {
+                    "name": name,
+                    "access_code": code,
+                    "player_id": pid if pid > 0 else None,
+                    "attending": bool(row["attending"]),
+                }
+                if accessory:
+                    guest_row["accessory"] = accessory
+                new_guests.append(guest_row)
             # Validate unique player_ids
             assigned = [g["player_id"] for g in new_guests if g["player_id"]]
             if len(assigned) != len(set(assigned)):
@@ -317,9 +325,16 @@ def _script_tab() -> None:
                 st.markdown(f"**{label}:** {overview[key]}")
 
     wraps = script.get("wrist_wrap_red_herrings") or []
+    accessories = script.get("accessories") or []
+    if accessories:
+        st.markdown("#### Guest accessories")
+        for item in accessories:
+            st.markdown(
+                f"- **{item.get('guest')}** ({item.get('character')}) — {item.get('accessory')}"
+            )
     if wraps:
-        st.markdown("#### Wrist-wrap red herrings")
-        st.caption("Keep The Tender Coconut Vendor from being singled out on sight alone.")
+        st.markdown("#### Wrist / tattoo red herrings")
+        st.caption("Several right-wrist items keep The Tender Coconut Vendor from being singled out on sight alone.")
         for item in wraps:
             st.markdown(f"- **{item.get('character')}** — {item.get('note')}")
 

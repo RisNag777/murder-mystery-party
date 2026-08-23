@@ -38,7 +38,7 @@
       "whisper_clue": "I saw the Filter Coffee Vendor cursing out Basavanna face-to-face near the Silk Cotton Tree earlier today!",
       "clue_target": "Coffee Vendor",
       "deductive_purpose": "Establishes petty review dispute",
-      "costume_note": "Wears an athletic sweatband/wrap for workout support (wrist-wrap red herring).",
+      "costume_note": "Sweatband on right wrist.",
       "goal": null,
       "may_lie": false
     },
@@ -53,6 +53,7 @@
       "whisper_clue": "I overheard the Flower Show Coordinator offering a massive cash bribe to a park inspector near the administrative office earlier today!",
       "clue_target": "Coordinator",
       "deductive_purpose": "Exposes cover-up corruption",
+      "costume_note": "Handkerchief (in pocket but visible or tied around right wrist).",
       "goal": null,
       "may_lie": false
     },
@@ -81,6 +82,7 @@
       "whisper_clue": "The Wealthy NRI Investor was desperately offering Basavanna a briefcase full of cash near the gazebo to buy back some incriminating land deeds!",
       "clue_target": "NRI Investor",
       "deductive_purpose": "Exposes land deed blackmail",
+      "costume_note": "Smart Watch or Fitness Wristband on right wrist.",
       "goal": null,
       "may_lie": false
     },
@@ -95,6 +97,7 @@
       "whisper_clue": "The Street Photographer was bragging earlier about setting up a hidden camera near the lake path.",
       "clue_target": "Photographer",
       "deductive_purpose": "Creates camera path suspicion",
+      "costume_note": "Sunglasses on head.",
       "goal": null,
       "may_lie": false
     },
@@ -109,7 +112,6 @@
       "whisper_clue": "The Coconut Vendor always wears a tight cloth wrap around their right wrist, even on extremely hot August days.",
       "clue_target": "Coconut Vendor",
       "deductive_purpose": "Physical Feature Evidence",
-      "costume_note": "Wears a leather/cloth camera strap wrapped around their wrist (wrist-wrap red herring).",
       "goal": null,
       "may_lie": false
     },
@@ -124,7 +126,7 @@
       "whisper_clue": "I saw the Hopcoms Juice Vendor wiping down a heavy blade near their fruit crates right around 3:30 PM! (Strategic lie shifting blame)",
       "clue_target": "Hopcoms Vendor",
       "deductive_purpose": "Killer's Lie",
-      "costume_note": "Wears a tight cloth wrap hiding their criminal skull tattoo.",
+      "costume_note": "Cloth tied on right wrist (hides the criminal skull tattoo).",
       "goal": null,
       "may_lie": true
     },
@@ -139,6 +141,7 @@
       "whisper_clue": "Through my binoculars, I saw Basavanna holding up a newspaper clipping in front of a fruit vendor at 3:15 PM!",
       "clue_target": "Coconut Vendor",
       "deductive_purpose": "Direct confrontation at fruit row",
+      "costume_note": "Hat.",
       "goal": "Mingle with everyone, trade your secret rumor, and figure out who attacked Basavanna!",
       "may_lie": false
     },
@@ -195,6 +198,7 @@
       "whisper_clue": "The Coconut Vendor's stall was completely unattended for 20 minutes right around 3:30 PM.",
       "clue_target": "Coconut Vendor",
       "deductive_purpose": "Busts Killer's Alibi",
+      "costume_note": "Tote Bag.",
       "goal": "Mingle with everyone, trade your secret rumor, and figure out who attacked Basavanna!",
       "may_lie": false
     },
