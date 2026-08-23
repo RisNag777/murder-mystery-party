@@ -96,11 +96,13 @@ def _render_character_tab(guest: dict) -> None:
     if accessory:
         st.info(f"**Costume / accessory:** {accessory}")
 
+    alibi = (char.get("alibi") or "").strip()
+    if alibi:
+        st.success(f"**Your alibi:** {alibi}")
+
     if char.get("type") == "suspect":
         if char.get("secret_motive"):
             st.markdown(f"**Secret motive:** {char['secret_motive']}")
-        if char.get("alibi"):
-            st.markdown(f"**Your alibi:** {char['alibi']}")
         if char.get("may_lie"):
             st.warning("You may LIE if asked direct questions.")
         else:
@@ -109,8 +111,6 @@ def _render_character_tab(guest: dict) -> None:
                 "(except keep your motive secret until you choose to share)."
             )
     else:
-        if char.get("alibi"):
-            st.markdown(f"**Your alibi:** {char['alibi']}")
         if char.get("goal"):
             st.markdown(f"**Your goal:** {char['goal']}")
 

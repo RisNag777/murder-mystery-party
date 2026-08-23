@@ -136,7 +136,11 @@ def _guests_tab() -> None:
             "name": st.column_config.TextColumn("Name", required=True),
             "access_code": st.column_config.TextColumn("Access code", disabled=True),
             "player_id": st.column_config.NumberColumn(
-                "Card #", min_value=0, max_value=20, step=1, help="0 = unassigned; used only for role assignment"
+                "Card #",
+                min_value=0,
+                max_value=22,
+                step=1,
+                help="0 = unassigned; used only for role assignment",
             ),
             "attending": st.column_config.CheckboxColumn("Attending"),
             "accessory": st.column_config.TextColumn("Accessory"),
@@ -260,11 +264,16 @@ def _characters_tab() -> None:
             st.markdown(f"**Type:** {char.get('type')}")
             if char.get("secret_motive"):
                 st.markdown(f"**Secret motive:** {char['secret_motive']}")
-            if char.get("alibi"):
-                st.markdown(f"**Claimed alibi (9:45–10:15 AM):** {char['alibi']}")
+            alibi = (char.get("alibi") or "").strip()
+            if alibi:
+                st.success(f"**Claimed alibi (9:45–10:15 AM):** {alibi}")
+            else:
+                st.caption("No claimed alibi on this card.")
             if char.get("goal"):
                 st.markdown(f"**Goal:** {char['goal']}")
-            st.markdown(f"**Whisper clue:** {char.get('whisper_clue')}")
+            whisper = (char.get("whisper_clue") or "").strip()
+            if whisper:
+                st.markdown(f"**Whisper clue:** {whisper}")
             if char.get("clue_target"):
                 st.markdown(f"**Clue targets:** {char['clue_target']}")
             if char.get("deductive_purpose"):
