@@ -8,7 +8,9 @@ from datetime import datetime
 from pathlib import Path
 from typing import Any
 
-DATA_DIR = Path(__file__).resolve().parent.parent / "data"
+ROOT_DIR = Path(__file__).resolve().parent.parent
+DATA_DIR = ROOT_DIR / "data"
+CHARACTER_IMAGES_DIR = ROOT_DIR / "assets" / "character_images"
 
 
 def _path(name: str) -> Path:
@@ -100,6 +102,19 @@ def character_by_id(player_id: int | None) -> dict | None:
         if char.get("player_id") == player_id:
             return char
     return None
+
+
+def character_image_paths(char: dict) -> list[Path]:
+    """Resolve on-disk paths for a character's portrait image(s)."""
+    names = char.get("images") or []
+    if isinstance(names, str):
+        names = [names]
+    paths: list[Path] = []
+    for name in names:
+        path = CHARACTER_IMAGES_DIR / str(name)
+        if path.is_file():
+            paths.append(path)
+    return paths
 
 
 def find_guest_by_code(code: str) -> dict | None:

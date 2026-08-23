@@ -6,6 +6,7 @@ import streamlit as st
 
 from party.store import (
     character_by_id,
+    character_image_paths,
     find_guest_by_code,
     get_guest_note,
     load_event,
@@ -89,6 +90,7 @@ def _render_character_tab(guest: dict) -> None:
         return
 
     st.markdown(f"### {char.get('title')}")
+    _show_character_images(char)
     st.markdown(f"**Role:** {char.get('role')}")
     accessory = (guest.get("accessory") or char.get("costume_note") or "").strip()
     if accessory:
@@ -115,6 +117,19 @@ def _render_character_tab(guest: dict) -> None:
         "Keep this page private — do not show other guests your secret motive "
         "or whether you may lie."
     )
+
+
+def _show_character_images(char: dict) -> None:
+    paths = character_image_paths(char)
+    if not paths:
+        return
+    if len(paths) == 1:
+        st.image(str(paths[0]), use_container_width=True)
+        return
+    cols = st.columns(len(paths))
+    for col, path in zip(cols, paths):
+        with col:
+            st.image(str(path), use_container_width=True)
 
 
 def _render_notes_tab(access_code: str) -> None:

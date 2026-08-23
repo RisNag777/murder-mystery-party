@@ -10,6 +10,7 @@ import streamlit as st
 from party.settings import get_setting
 from party.store import (
     character_by_id,
+    character_image_paths,
     generate_access_code,
     load_characters,
     load_event,
@@ -240,6 +241,15 @@ def _characters_tab() -> None:
         if guest:
             label += f"  · assigned to {guest.get('name')}"
         with st.expander(label, expanded=False):
+            paths = character_image_paths(char)
+            if paths:
+                if len(paths) == 1:
+                    st.image(str(paths[0]), use_container_width=True)
+                else:
+                    cols = st.columns(len(paths))
+                    for col, path in zip(cols, paths):
+                        with col:
+                            st.image(str(path), use_container_width=True)
             st.markdown(f"**Role:** {char.get('role')}")
             st.markdown(f"**Type:** {char.get('type')}")
             if char.get("secret_motive"):
