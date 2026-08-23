@@ -16,7 +16,10 @@ def _path(name: str) -> Path:
 
 
 def load_json(name: str) -> Any:
-    with _path(name).open(encoding="utf-8-sig") as f:
+    path = _path(name)
+    if not path.exists():
+        raise FileNotFoundError(f"Missing data file: {path}")
+    with path.open(encoding="utf-8-sig") as f:
         return json.load(f)
 
 
@@ -46,6 +49,15 @@ def save_guests(guests: list[dict]) -> None:
 
 def load_characters() -> dict:
     return load_json("characters.json")
+
+
+def load_announcements() -> list[dict]:
+    """Kept for deploy compatibility; announcements UI was removed."""
+    path = _path("announcements.json")
+    if not path.exists():
+        return []
+    data = load_json("announcements.json")
+    return data if isinstance(data, list) else []
 
 
 def load_host_script() -> dict:
