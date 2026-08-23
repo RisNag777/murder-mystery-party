@@ -2,6 +2,8 @@
 
 Streamlit app for hosting a locked-guest murder mystery party: manage roles, post announcements, and share private guest links.
 
+**Live app:** [https://murder-mystery-party.streamlit.app/](https://murder-mystery-party.streamlit.app/)
+
 ## Setup
 
 ```powershell
@@ -18,26 +20,29 @@ Edit `.env` and set at least `HOST_PASSWORD`.
 streamlit run app.py
 ```
 
-- **Guest portal:** open the app and enter an access code, or use `http://localhost:8501/?code=XXXX`
+- **Guest portal:** open the app and enter an access code, or use `https://murder-mystery-party.streamlit.app/?code=XXXX`
 - **Host dashboard:** choose Host in the sidebar and sign in with `HOST_PASSWORD`
 
 ## Deploy to Streamlit Community Cloud
 
-1. Push this repo to GitHub (already at `https://github.com/RisNag777/murder-mystery-party`).
+App is deployed at [https://murder-mystery-party.streamlit.app/](https://murder-mystery-party.streamlit.app/).
+
+To redeploy or recreate:
+
+1. Push this repo to GitHub (`https://github.com/RisNag777/murder-mystery-party`).
 2. Go to [share.streamlit.io](https://share.streamlit.io) and sign in with GitHub.
-3. Click **New app** and choose:
+3. **New app** / manage existing app:
    - **Repository:** `RisNag777/murder-mystery-party`
    - **Branch:** `main`
    - **Main file path:** `app.py`
-4. Under **Advanced settings → Secrets**, paste:
+4. Under **Advanced settings → Secrets**, set:
 
 ```toml
 HOST_PASSWORD = "your-real-host-password"
+PUBLIC_APP_URL = "https://murder-mystery-party.streamlit.app"
 ```
 
-5. Click **Deploy**. Your public URL will look like `https://murder-mystery-party-….streamlit.app`.
-
-Guests can open that URL (optionally with `?code=THEIR-CODE`). Host signs in from the sidebar with `HOST_PASSWORD`.
+Guests open the live URL (optionally with `?code=THEIR-CODE`). Host signs in from the sidebar with `HOST_PASSWORD`.
 
 **Note:** Guest notes and host edits to JSON files on Cloud are ephemeral (reset when the app reboots). For the party, keep important guest/role data in the repo’s `data/` files.
 

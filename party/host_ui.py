@@ -9,6 +9,7 @@ from urllib.parse import urlencode
 import pandas as pd
 import streamlit as st
 
+from party.settings import get_setting
 from party.store import (
     character_by_id,
     generate_access_code,
@@ -21,6 +22,8 @@ from party.store import (
     save_event,
     save_guests,
 )
+
+DEFAULT_PUBLIC_URL = "https://murder-mystery-party.streamlit.app"
 
 
 def require_host_login(password: str) -> bool:
@@ -42,16 +45,13 @@ def require_host_login(password: str) -> bool:
 
 
 def _base_url() -> str:
-    """Best-effort public base URL for guest links."""
-    try:
-        return st.get_option("browser.serverAddress") or "http://localhost:8501"
-    except Exception:  # noqa: BLE001
-        return "http://localhost:8501"
+    """Public base URL for guest share links."""
+    configured = get_setting("PUBLIC_APP_URL", DEFAULT_PUBLIC_URL).strip().rstrip("/")
+    return configured or DEFAULT_PUBLIC_URL
 
 
 def guest_link(code: str) -> str:
-    # Streamlit query params: guests open the app with ?code=
-    return f"?{urlencode({'code': code})}"
+    return f"{_base_url()}/?{urlencode({'code': code})}"
 
 
 def render_host() -> None:
@@ -205,9 +205,8 @@ def _guests_tab() -> None:
 
     st.markdown("#### Guest links")
     st.caption(
-        "Share each guest their access code or append it to your Streamlit URL, "
-        f"e.g. `http://localhost:8501/?code=XXXX`. "
-        f"(Configured server address hint: `{_base_url()}`)"
+        "Share each guest their access code or full link, "
+        f"e.g. `{_base_url()}/?code=XXXX`."
     )
     link_rows = []
     for g in load_guests():
@@ -216,7 +215,7 @@ def _guests_tab() -> None:
             {
                 "Name": g.get("name"),
                 "Code": code,
-                "Link query": guest_link(code) if code else "",
+                "Link": guest_link(code) if code else "",
             }
         )
     st.dataframe(pd.DataFrame(link_rows), use_container_width=True, hide_index=True)
