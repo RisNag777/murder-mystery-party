@@ -10,6 +10,7 @@ from dotenv import load_dotenv
 
 from party.guest_ui import render_guest
 from party.host_ui import render_host, require_host_login
+from party.theme import apply_background
 
 load_dotenv(Path(__file__).resolve().parent / ".env")
 
@@ -22,6 +23,7 @@ st.set_page_config(
 
 
 def main() -> None:
+    apply_background()
     st.sidebar.title("Glass House Mystery")
     st.sidebar.caption("Lalbagh murder mystery party")
 

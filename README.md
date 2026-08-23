@@ -33,4 +33,6 @@ All content lives under `data/` as JSON (no database):
 | `announcements.json` | In-app updates feed |
 | `host_script.json` | Host cheat sheet and round scripts |
 
+Background image: `assets/lalbagh-glass-house.png`
+
 Replace the placeholder story by editing `characters.json` and `host_script.json`.
