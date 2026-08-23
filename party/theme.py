@@ -43,6 +43,12 @@ def apply_background() -> None:
             border-radius: 16px !important;
             box-shadow: 0 8px 32px rgba(0, 0, 0, 0.16) !important;
         }}
+
+        /* Never show placeholder/example text in text areas */
+        textarea::placeholder {{
+            color: transparent !important;
+            opacity: 0 !important;
+        }}
         </style>
         """,
         unsafe_allow_html=True,

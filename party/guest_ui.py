@@ -4,7 +4,14 @@ from __future__ import annotations
 
 import streamlit as st
 
-from party.store import character_by_id, find_guest_by_code, load_announcements, load_event
+from party.store import (
+    character_by_id,
+    find_guest_by_code,
+    get_guest_note,
+    load_announcements,
+    load_event,
+    set_guest_note,
+)
 
 
 def _resolve_code() -> str | None:
@@ -26,7 +33,7 @@ def render_guest() -> None:
     if not code:
         st.markdown("Enter the access code from your host to see event updates and your character card.")
         with st.form("guest_code_form"):
-            entered = st.text_input("Access code", placeholder="CAMP-XXXX")
+            entered = st.text_input("Access code")
             ok = st.form_submit_button("Enter")
         if ok and entered.strip():
             st.session_state.guest_code = entered.strip().upper()
@@ -44,9 +51,23 @@ def render_guest() -> None:
             st.rerun()
         return
 
-    st.session_state.guest_code = guest["access_code"]
+    access_code = guest["access_code"]
+    st.session_state.guest_code = access_code
     st.success(f"Welcome, **{guest.get('name')}**.")
 
+    party_tab, character_tab, notes_tab = st.tabs(["Party", "Your character", "My notes"])
+
+    with party_tab:
+        _render_party_tab(event)
+
+    with character_tab:
+        _render_character_tab(guest)
+
+    with notes_tab:
+        _render_notes_tab(access_code)
+
+
+def _render_party_tab(event: dict) -> None:
     st.markdown(f"## {event.get('title', 'Party')}")
     meta = " · ".join(
         p for p in [event.get("date"), event.get("time"), event.get("location")] if p
@@ -67,7 +88,8 @@ def render_guest() -> None:
             st.write(item.get("body", ""))
             st.markdown("---")
 
-    st.markdown("### Your character card")
+
+def _render_character_tab(guest: dict) -> None:
     pid = guest.get("player_id")
     if not pid:
         st.warning("Your host has not assigned you a character yet. Check back later.")
@@ -78,7 +100,7 @@ def render_guest() -> None:
         st.error("Character data missing for your assignment. Tell the host.")
         return
 
-    st.markdown(f"#### {char.get('title')}")
+    st.markdown(f"### {char.get('title')}")
     st.markdown(f"**Role:** {char.get('role')}")
 
     if char.get("type") == "suspect":
@@ -89,13 +111,39 @@ def render_guest() -> None:
         if char.get("may_lie"):
             st.warning("You may LIE if asked direct questions.")
         else:
-            st.info("You must tell the truth about what you know (except keep your motive secret until you choose to share).")
+            st.info(
+                "You must tell the truth about what you know "
+                "(except keep your motive secret until you choose to share)."
+            )
     else:
         if char.get("goal"):
             st.markdown(f"**Your goal:** {char['goal']}")
 
     st.markdown(f"**Whisper clue to share:** _{char.get('whisper_clue')}_")
-    st.caption("Keep this page private — do not show other guests your secret motive or whether you may lie.")
+    st.caption(
+        "Keep this page private — do not show other guests your secret motive "
+        "or whether you may lie."
+    )
+
+
+def _render_notes_tab(access_code: str) -> None:
+    st.markdown("### My notes")
+
+    widget_key = f"notes_v4_{access_code.strip().upper()}"
+    if widget_key not in st.session_state:
+        st.session_state[widget_key] = get_guest_note(access_code) or ""
+
+    st.text_area(
+        "notes_v4",
+        height=280,
+        key=widget_key,
+        label_visibility="collapsed",
+        placeholder="",
+    )
+    if st.button("Save notes", type="primary", key=f"save_{widget_key}"):
+        set_guest_note(access_code, st.session_state.get(widget_key, "").strip())
+        st.success("Notes saved.")
+        st.rerun()
 
 
 def _public_event_preview(event: dict) -> None:

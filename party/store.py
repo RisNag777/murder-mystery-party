@@ -5,6 +5,7 @@ from __future__ import annotations
 import json
 import secrets
 import string
+from datetime import datetime
 from pathlib import Path
 from typing import Any
 
@@ -16,7 +17,7 @@ def _path(name: str) -> Path:
 
 
 def load_json(name: str) -> Any:
-    with _path(name).open(encoding="utf-8") as f:
+    with _path(name).open(encoding="utf-8-sig") as f:
         return json.load(f)
 
 
@@ -58,6 +59,34 @@ def save_announcements(items: list[dict]) -> None:
 
 def load_host_script() -> dict:
     return load_json("host_script.json")
+
+
+def load_guest_notes() -> dict:
+    path = _path("guest_notes.json")
+    if not path.exists():
+        return {}
+    return load_json("guest_notes.json")
+
+
+def save_guest_notes(notes: dict) -> None:
+    save_json("guest_notes.json", notes)
+
+
+def get_guest_note(access_code: str) -> str:
+    notes = load_guest_notes()
+    entry = notes.get(access_code.strip().upper(), {})
+    if isinstance(entry, str):
+        return entry
+    return entry.get("text", "")
+
+
+def set_guest_note(access_code: str, text: str) -> None:
+    notes = load_guest_notes()
+    notes[access_code.strip().upper()] = {
+        "text": text,
+        "updated_at": datetime.now().isoformat(timespec="seconds"),
+    }
+    save_guest_notes(notes)
 
 
 def character_by_id(player_id: int | None) -> dict | None:
