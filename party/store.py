@@ -48,14 +48,6 @@ def load_characters() -> dict:
     return load_json("characters.json")
 
 
-def load_announcements() -> list[dict]:
-    return load_json("announcements.json")
-
-
-def save_announcements(items: list[dict]) -> None:
-    save_json("announcements.json", items)
-
-
 def load_host_script() -> dict:
     return load_json("host_script.json")
 

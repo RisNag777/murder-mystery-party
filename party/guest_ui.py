@@ -8,7 +8,6 @@ from party.store import (
     character_by_id,
     find_guest_by_code,
     get_guest_note,
-    load_announcements,
     load_event,
     set_guest_note,
 )
@@ -31,7 +30,7 @@ def render_guest() -> None:
 
     code = _resolve_code()
     if not code:
-        st.markdown("Enter the access code from your host to see event updates and your character card.")
+        st.markdown("Enter the access code from your host to see event details and your character card.")
         with st.form("guest_code_form"):
             entered = st.text_input("Access code")
             ok = st.form_submit_button("Enter")
@@ -76,17 +75,6 @@ def _render_party_tab(event: dict) -> None:
         st.markdown(meta)
     if event.get("blurb"):
         st.write(event["blurb"])
-
-    st.markdown("---")
-    st.markdown("### Party updates")
-    announcements = load_announcements()
-    if not announcements:
-        st.write("No updates yet. Check back soon.")
-    else:
-        for item in announcements:
-            st.markdown(f"**{item.get('title', 'Update')}**  \n*{item.get('created_at', '')}*")
-            st.write(item.get("body", ""))
-            st.markdown("---")
 
 
 def _render_character_tab(guest: dict) -> None:

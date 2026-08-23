@@ -2,8 +2,6 @@
 
 from __future__ import annotations
 
-import secrets
-from datetime import datetime
 from urllib.parse import urlencode
 
 import pandas as pd
@@ -13,12 +11,10 @@ from party.settings import get_setting
 from party.store import (
     character_by_id,
     generate_access_code,
-    load_announcements,
     load_characters,
     load_event,
     load_guests,
     load_host_script,
-    save_announcements,
     save_event,
     save_guests,
 )
@@ -56,13 +52,12 @@ def guest_link(code: str) -> str:
 
 def render_host() -> None:
     st.title("Host dashboard")
-    st.caption("The Lalbagh Glass House Mystery — manage guests, roles, and party updates.")
+    st.caption("The Lalbagh Glass House Mystery — manage guests, roles, and the host packet.")
 
     tabs = st.tabs(
         [
             "Event",
             "Guests & roles",
-            "Announcements",
             "Character deck",
             "Host script",
         ]
@@ -73,10 +68,8 @@ def render_host() -> None:
     with tabs[1]:
         _guests_tab()
     with tabs[2]:
-        _announcements_tab()
-    with tabs[3]:
         _characters_tab()
-    with tabs[4]:
+    with tabs[3]:
         _script_tab()
 
 
@@ -227,42 +220,6 @@ def _guests_tab() -> None:
             }
         )
     st.dataframe(pd.DataFrame(link_rows), use_container_width=True, hide_index=True)
-
-
-def _announcements_tab() -> None:
-    st.markdown("### Announcements")
-    items = load_announcements()
-
-    with st.form("new_announcement"):
-        title = st.text_input("Title")
-        body = st.text_area("Message", height=140)
-        submitted = st.form_submit_button("Post announcement", type="primary")
-
-    if submitted:
-        if not title.strip() or not body.strip():
-            st.error("Title and message are required.")
-        else:
-            entry = {
-                "id": secrets.token_hex(4),
-                "created_at": datetime.now().isoformat(timespec="seconds"),
-                "title": title.strip(),
-                "body": body.strip(),
-            }
-            items = [entry, *items]
-            save_announcements(items)
-            st.success("Announcement posted in-app.")
-            st.rerun()
-
-    st.markdown("#### Feed")
-    if not items:
-        st.write("No announcements yet.")
-    for item in items:
-        with st.expander(f"{item.get('title', '(untitled)')} — {item.get('created_at', '')}", expanded=False):
-            st.write(item.get("body", ""))
-            if st.button("Delete", key=f"del_{item.get('id')}"):
-                remaining = [a for a in items if a.get("id") != item.get("id")]
-                save_announcements(remaining)
-                st.rerun()
 
 
 def _characters_tab() -> None:

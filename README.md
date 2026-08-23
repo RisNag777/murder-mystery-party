@@ -1,6 +1,6 @@
 # The Lalbagh Glass House Mystery
 
-Streamlit app for hosting a locked-guest murder mystery party: manage roles, post announcements, and share private guest links.
+Streamlit app for hosting a locked-guest murder mystery party: manage roles and share private guest links.
 
 **Live app:** [https://murder-mystery-party.streamlit.app/](https://murder-mystery-party.streamlit.app/)
 
@@ -55,7 +55,6 @@ All content lives under `data/` as JSON (no database):
 | `event.json` | Party title, date, location, blurb |
 | `guests.json` | Locked guest list, access codes, player assignments |
 | `characters.json` | Lalbagh character & clue matrix (20 roles) |
-| `announcements.json` | In-app updates feed |
 | `host_script.json` | Host cheat sheet and round scripts |
 
 Background image: `assets/lalbagh-glass-house.png` (also served from `static/`)
