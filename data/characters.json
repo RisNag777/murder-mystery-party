@@ -25,7 +25,10 @@
       "clue_target": "Botanist",
       "deductive_purpose": "Discredits Botanist's expertise",
       "goal": null,
-      "may_lie": false
+      "may_lie": false,
+      "images": [
+        "flower_show_coordinator.jpg"
+      ]
     },
     {
       "player_id": 2,
@@ -40,7 +43,10 @@
       "deductive_purpose": "Establishes petty review dispute",
       "costume_note": "Sweatband on right wrist.",
       "goal": null,
-      "may_lie": false
+      "may_lie": false,
+      "images": [
+        "marathon_runner.jpg"
+      ]
     },
     {
       "player_id": 3,
@@ -55,7 +61,10 @@
       "deductive_purpose": "Exposes cover-up corruption",
       "costume_note": "Handkerchief (in pocket but visible or tied around right wrist).",
       "goal": null,
-      "may_lie": false
+      "may_lie": false,
+      "images": [
+        "botanist.jpg"
+      ]
     },
     {
       "player_id": 4,
@@ -69,7 +78,10 @@
       "clue_target": "Tech Founder",
       "deductive_purpose": "Placed near lake on board call",
       "goal": null,
-      "may_lie": false
+      "may_lie": false,
+      "images": [
+        "filter_coffee_vendor.jpg"
+      ]
     },
     {
       "player_id": 5,
@@ -84,7 +96,10 @@
       "deductive_purpose": "Exposes land deed blackmail",
       "costume_note": "Smart Watch or Fitness Wristband on right wrist.",
       "goal": null,
-      "may_lie": false
+      "may_lie": false,
+      "images": [
+        "tech_startup_founder.jpg"
+      ]
     },
     {
       "player_id": 6,
@@ -99,7 +114,10 @@
       "deductive_purpose": "Creates camera path suspicion",
       "costume_note": "Sunglasses on head.",
       "goal": null,
-      "may_lie": false
+      "may_lie": false,
+      "images": [
+        "nri_investor.jpg"
+      ]
     },
     {
       "player_id": 7,
@@ -113,7 +131,10 @@
       "clue_target": "Coconut Vendor",
       "deductive_purpose": "Physical Feature Evidence",
       "goal": null,
-      "may_lie": false
+      "may_lie": false,
+      "images": [
+        "street_photographer.jpg"
+      ]
     },
     {
       "player_id": 8,
@@ -128,7 +149,11 @@
       "deductive_purpose": "Killer's Lie",
       "costume_note": "Cloth tied on right wrist (hides the criminal skull tattoo).",
       "goal": null,
-      "may_lie": true
+      "may_lie": true,
+      "images": [
+        "tender_coconut_vendor.jpg",
+        "criminal.jpg"
+      ]
     },
     {
       "player_id": 9,
@@ -143,7 +168,10 @@
       "deductive_purpose": "Direct confrontation at fruit row",
       "costume_note": "Hat.",
       "goal": "Mingle with everyone, trade your secret rumor, and figure out who attacked Basavanna!",
-      "may_lie": false
+      "may_lie": false,
+      "images": [
+        "bird_watcher.jpg"
+      ]
     },
     {
       "player_id": 10,
@@ -153,11 +181,14 @@
       "is_killer": false,
       "secret_motive": null,
       "alibi": null,
-      "whisper_clue": "The Mango Stall Vendor tried to borrow my heavy fruit knife earlier today because their own cutting tools went missing.",
+      "whisper_clue": "The Vegetable Vendor tried to borrow my knife earlier today because their own cutting tools went missing.",
       "clue_target": "Shared Tools",
       "deductive_purpose": "Shared fruit tool availability",
       "goal": "Mingle with everyone, trade your secret rumor, and figure out who attacked Basavanna!",
-      "may_lie": false
+      "may_lie": false,
+      "images": [
+        "juice_vendor.jpg"
+      ]
     },
     {
       "player_id": 11,
@@ -171,7 +202,10 @@
       "clue_target": "Coffee Vendor",
       "deductive_purpose": "Solid Alibi (Clears Coffee Vendor)",
       "goal": "Mingle with everyone, trade your secret rumor, and figure out who attacked Basavanna!",
-      "may_lie": false
+      "may_lie": false,
+      "images": [
+        "walking_club_president.jpg"
+      ]
     },
     {
       "player_id": 12,
@@ -185,11 +219,14 @@
       "clue_target": "Fugitive Story",
       "deductive_purpose": "High-stakes fugitive motive",
       "goal": "Mingle with everyone, trade your secret rumor, and figure out who attacked Basavanna!",
-      "may_lie": false
+      "may_lie": false,
+      "images": [
+        "floral_volunteer.jpg"
+      ]
     },
     {
       "player_id": 13,
-      "title": "The Mango Stall Vendor",
+      "title": "The Vegetable Vendor",
       "role": "Park Investigator",
       "type": "investigator",
       "is_killer": false,
@@ -200,7 +237,10 @@
       "deductive_purpose": "Busts Killer's Alibi",
       "costume_note": "Tote Bag.",
       "goal": "Mingle with everyone, trade your secret rumor, and figure out who attacked Basavanna!",
-      "may_lie": false
+      "may_lie": false,
+      "images": [
+        "vegetable_vendor.jpeg"
+      ]
     },
     {
       "player_id": 14,
@@ -214,7 +254,10 @@
       "clue_target": "Fugitive Story",
       "deductive_purpose": "Corroborates The Street Photographer wrist wrap clue",
       "goal": "Mingle with everyone, trade your secret rumor, and figure out who attacked Basavanna!",
-      "may_lie": false
+      "may_lie": false,
+      "images": [
+        "security_guard.jpg"
+      ]
     },
     {
       "player_id": 15,
@@ -228,7 +271,10 @@
       "clue_target": "Marathon Runner",
       "deductive_purpose": "Solid Alibi (Clears Runner)",
       "goal": "Mingle with everyone, trade your secret rumor, and figure out who attacked Basavanna!",
-      "may_lie": false
+      "may_lie": false,
+      "images": [
+        "yoga_instructor.jpg"
+      ]
     },
     {
       "player_id": 16,
@@ -242,7 +288,10 @@
       "clue_target": "Coordinator",
       "deductive_purpose": "Heightens Coordinator suspicion",
       "goal": "Mingle with everyone, trade your secret rumor, and figure out who attacked Basavanna!",
-      "may_lie": false
+      "may_lie": false,
+      "images": [
+        "botany_student.jpg"
+      ]
     },
     {
       "player_id": 17,
@@ -256,7 +305,10 @@
       "clue_target": "Botanist",
       "deductive_purpose": "Exposes orchid hiding evidence",
       "goal": "Mingle with everyone, trade your secret rumor, and figure out who attacked Basavanna!",
-      "may_lie": false
+      "may_lie": false,
+      "images": [
+        "sketch_artist.jpeg"
+      ]
     },
     {
       "player_id": 18,
@@ -270,11 +322,14 @@
       "clue_target": "NRI Investor",
       "deductive_purpose": "Busts NRI Car Alibi",
       "goal": "Mingle with everyone, trade your secret rumor, and figure out who attacked Basavanna!",
-      "may_lie": false
+      "may_lie": false,
+      "images": [
+        "boat_operator.jpg"
+      ]
     },
     {
       "player_id": 19,
-      "title": "The Maintenance Lawnmower Operator",
+      "title": "The Dog Walker",
       "role": "Park Investigator",
       "type": "investigator",
       "is_killer": false,
@@ -284,7 +339,10 @@
       "clue_target": "Coordinator",
       "deductive_purpose": "Accuses Coordinator of locking shed",
       "goal": "Mingle with everyone, trade your secret rumor, and figure out who attacked Basavanna!",
-      "may_lie": false
+      "may_lie": false,
+      "images": [
+        "dog_walker.jpg"
+      ]
     },
     {
       "player_id": 20,
@@ -298,7 +356,10 @@
       "clue_target": "Longtime Vendor",
       "deductive_purpose": "Narrows target to fruit cart sellers",
       "goal": "Mingle with everyone, trade your secret rumor, and figure out who attacked Basavanna!",
-      "may_lie": false
+      "may_lie": false,
+      "images": [
+        "senior_citizen.jpg"
+      ]
     }
   ]
 }

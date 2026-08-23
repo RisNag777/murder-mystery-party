@@ -43,7 +43,7 @@
     },
     {
       "guest": "Naresh",
-      "character": "The Mango Stall Vendor",
+      "character": "The Vegetable Vendor",
       "accessory": "Tote Bag"
     }
   ],
@@ -91,14 +91,14 @@
     {
       "time": "3:25 PM",
       "events": [
-        "The Maintenance Lawnmower Operator sees The Overworked Flower Show Coordinator trying to lock the maintenance shed from the outside."
+        "The Dog Walker sees The Overworked Flower Show Coordinator trying to lock the maintenance shed from the outside."
       ]
     },
     {
       "time": "3:30 PM (CRIME WINDOW)",
       "events": [
         "Basavanna vanishes near the storage shed / lake path.",
-        "The Tender Coconut Vendor leaves their cart unattended for 20 minutes (seen by The Mango Stall Vendor).",
+        "The Tender Coconut Vendor leaves their cart unattended for 20 minutes (seen by The Vegetable Vendor).",
         "The Self-Proclaimed Botanist hides wiped garden shears in a hollowed-out tree trunk (seen by The Sketch Artist).",
         "The Tech Startup Founder is taking a board call near the Lotus Pond (heard screaming near the lake by The Filter Coffee Vendor).",
         "The Street Photographer is changing camera lenses near the lake path."
