@@ -9,11 +9,9 @@ from urllib.parse import urlencode
 import pandas as pd
 import streamlit as st
 
-from party.emailer import send_announcement_email, smtp_configured
 from party.store import (
     character_by_id,
     generate_access_code,
-    guest_emails,
     load_announcements,
     load_characters,
     load_event,
@@ -126,7 +124,6 @@ def _guests_tab() -> None:
         rows.append(
             {
                 "name": g.get("name", ""),
-                "email": g.get("email", ""),
                 "access_code": g.get("access_code", ""),
                 "player_id": pid if pid is not None else 0,
                 "attending": bool(g.get("attending", True)),
@@ -142,7 +139,6 @@ def _guests_tab() -> None:
         use_container_width=True,
         column_config={
             "name": st.column_config.TextColumn("Name", required=True),
-            "email": st.column_config.TextColumn("Email"),
             "access_code": st.column_config.TextColumn("Access code", disabled=True),
             "player_id": st.column_config.NumberColumn(
                 "Card #", min_value=0, max_value=20, step=1, help="0 = unassigned; used only for role assignment"
@@ -171,7 +167,6 @@ def _guests_tab() -> None:
                 new_guests.append(
                     {
                         "name": name,
-                        "email": "" if pd.isna(row["email"]) else str(row["email"]).strip(),
                         "access_code": code,
                         "player_id": pid if pid > 0 else None,
                         "attending": bool(row["attending"]),
@@ -230,16 +225,10 @@ def _guests_tab() -> None:
 def _announcements_tab() -> None:
     st.markdown("### Announcements")
     items = load_announcements()
-    event = load_event()
 
     with st.form("new_announcement"):
         title = st.text_input("Title")
         body = st.text_area("Message", height=140)
-        also_email = st.checkbox(
-            "Also email guests",
-            value=False,
-            help="Requires SMTP settings in .env",
-        )
         submitted = st.form_submit_button("Post announcement", type="primary")
 
     if submitted:
@@ -255,30 +244,6 @@ def _announcements_tab() -> None:
             items = [entry, *items]
             save_announcements(items)
             st.success("Announcement posted in-app.")
-
-            if also_email:
-                recipients = guest_emails()
-                subject = f"[{event.get('title', 'Party')}] {entry['title']}"
-                email_body = (
-                    f"{entry['body']}\n\n"
-                    f"— {event.get('title', 'Party host')}\n"
-                    f"{event.get('date', '')} · {event.get('time', '')} · {event.get('location', '')}\n"
-                )
-                if not smtp_configured():
-                    st.warning(
-                        "SMTP is not configured. Announcement was saved in-app, but email was skipped. "
-                        "Copy `.env.example` to `.env` and fill in SMTP_* values."
-                    )
-                else:
-                    ok, msg = send_announcement_email(
-                        subject=subject,
-                        body=email_body,
-                        recipients=recipients,
-                    )
-                    if ok:
-                        st.success(msg)
-                    else:
-                        st.error(msg)
             st.rerun()
 
     st.markdown("#### Feed")

@@ -10,7 +10,7 @@ pip install -r requirements.txt
 copy .env.example .env
 ```
 
-Edit `.env` and set at least `HOST_PASSWORD`. Optionally fill in `SMTP_*` to email announcements.
+Edit `.env` and set at least `HOST_PASSWORD`.
 
 ## Run locally
 
@@ -33,13 +33,6 @@ streamlit run app.py
 
 ```toml
 HOST_PASSWORD = "your-real-host-password"
-
-# Optional email blasts
-# SMTP_HOST = "smtp.example.com"
-# SMTP_PORT = "587"
-# SMTP_USER = "you@example.com"
-# SMTP_PASSWORD = "..."
-# SMTP_FROM = "you@example.com"
 ```
 
 5. Click **Deploy**. Your public URL will look like `https://murder-mystery-party-….streamlit.app`.
@@ -55,7 +48,7 @@ All content lives under `data/` as JSON (no database):
 | File | Purpose |
 |------|---------|
 | `event.json` | Party title, date, location, blurb |
-| `guests.json` | Locked guest list, emails, access codes, player assignments |
+| `guests.json` | Locked guest list, access codes, player assignments |
 | `characters.json` | Lalbagh character & clue matrix (20 roles) |
 | `announcements.json` | In-app updates feed |
 | `host_script.json` | Host cheat sheet and round scripts |

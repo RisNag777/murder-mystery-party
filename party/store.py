@@ -112,15 +112,3 @@ def generate_access_code(prefix: str = "CAMP") -> str:
     token = "".join(secrets.choice(alphabet) for _ in range(4))
     token2 = "".join(secrets.choice(alphabet) for _ in range(4))
     return f"{prefix}-{token[:2]}{token2[:2]}"
-
-
-def guest_emails(guests: list[dict] | None = None) -> list[str]:
-    guests = guests if guests is not None else load_guests()
-    emails: list[str] = []
-    for g in guests:
-        if not g.get("attending", True):
-            continue
-        email = (g.get("email") or "").strip()
-        if email and "@" in email:
-            emails.append(email)
-    return emails
