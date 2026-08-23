@@ -109,10 +109,14 @@ def _render_character_tab(guest: dict) -> None:
                 "(except keep your motive secret until you choose to share)."
             )
     else:
+        if char.get("alibi"):
+            st.markdown(f"**Your alibi:** {char['alibi']}")
         if char.get("goal"):
             st.markdown(f"**Your goal:** {char['goal']}")
 
-    st.markdown(f"**Whisper clue to share:** _{char.get('whisper_clue')}_")
+    whisper = (char.get("whisper_clue") or "").strip()
+    if whisper:
+        st.markdown(f"**Whisper clue to share:** _{whisper}_")
     st.caption(
         "Keep this page private — do not show other guests your secret motive "
         "or whether you may lie."

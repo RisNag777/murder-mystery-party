@@ -45,6 +45,16 @@
       "guest": "Naresh",
       "character": "The Vegetable Vendor",
       "accessory": "Tote Bag"
+    },
+    {
+      "guest": "Leiya",
+      "character": "The Street Photographer's Kid",
+      "accessory": "Toy camera"
+    },
+    {
+      "guest": "Anya",
+      "character": "The Juice Vendor's Kid",
+      "accessory": "Tetrapak of juice"
     }
   ],
   "wrist_wrap_red_herrings": [

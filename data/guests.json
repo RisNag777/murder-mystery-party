@@ -125,5 +125,19 @@
     "access_code": "35WK",
     "player_id": 20,
     "attending": true
+  },
+  {
+    "name": "Leiya",
+    "access_code": "VVU9",
+    "player_id": 21,
+    "attending": true,
+    "accessory": "Toy camera"
+  },
+  {
+    "name": "Anya",
+    "access_code": "SC3J",
+    "player_id": 22,
+    "attending": true,
+    "accessory": "Tetrapak of juice"
   }
 ]
