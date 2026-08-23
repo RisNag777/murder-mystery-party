@@ -261,7 +261,7 @@ def _characters_tab() -> None:
             if char.get("secret_motive"):
                 st.markdown(f"**Secret motive:** {char['secret_motive']}")
             if char.get("alibi"):
-                st.markdown(f"**Claimed alibi (3:15–3:45 PM):** {char['alibi']}")
+                st.markdown(f"**Claimed alibi (9:45–10:15 AM):** {char['alibi']}")
             if char.get("goal"):
                 st.markdown(f"**Goal:** {char['goal']}")
             st.markdown(f"**Whisper clue:** {char.get('whisper_clue')}")
@@ -313,7 +313,7 @@ def _script_tab() -> None:
 
     timeline = script.get("timeline") or []
     if timeline:
-        st.markdown("#### Timeline & movement map (3:00–3:45 PM)")
+        st.markdown("#### Timeline & movement map (9:30–10:15 AM)")
         for block in timeline:
             st.markdown(f"**{block.get('time')}**")
             for event in block.get("events", []):

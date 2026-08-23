@@ -81,31 +81,31 @@
   ],
   "timeline": [
     {
-      "time": "3:00 PM – 3:15 PM",
+      "time": "9:30 AM – 9:45 AM",
       "events": [
         "Basavanna confronts vendors near the North Gate fruit row with a newspaper clipping."
       ]
     },
     {
-      "time": "3:15 PM",
+      "time": "9:45 AM",
       "events": [
         "The College Botany Student sees The Overworked Flower Show Coordinator arguing with Basavanna near the Glass House."
       ]
     },
     {
-      "time": "3:20 PM",
+      "time": "9:50 AM",
       "events": [
         "The Lalbagh Lake Duck-Boat Operator sees The Wealthy NRI Investor sneak out of their car to hide a metal briefcase under an unattended fruit cart near the lake path."
       ]
     },
     {
-      "time": "3:25 PM",
+      "time": "9:55 AM",
       "events": [
         "The Dog Walker sees The Overworked Flower Show Coordinator trying to lock the maintenance shed from the outside."
       ]
     },
     {
-      "time": "3:30 PM (CRIME WINDOW)",
+      "time": "10:00 AM (CRIME WINDOW)",
       "events": [
         "Basavanna vanishes near the storage shed / lake path.",
         "The Tender Coconut Vendor leaves their cart unattended for 20 minutes (seen by The Vegetable Vendor).",
@@ -115,7 +115,7 @@
       ]
     },
     {
-      "time": "3:15 PM – 3:45 PM (ALIBI WINDOWS)",
+      "time": "9:45 AM – 10:15 AM (ALIBI WINDOWS)",
       "events": [
         "The Marathon Runner leads a public stretch session on the grass opposite the hill (verified by The Yoga Instructor).",
         "The Filter Coffee Vendor drinks tea at the West Gate stall with the Morning Walker Club (verified by The Morning Walker Club President)."
@@ -129,7 +129,7 @@
       "duration": "15 minutes",
       "steps": [
         "Gather in a circle. Read Round 1 Script.",
-        "Guests open envelopes, introduce characters, and state where they claim to have been at 3:30 PM."
+        "Guests open envelopes, introduce characters, and state where they claim to have been at 10:00 AM."
       ]
     },
     {
@@ -162,7 +162,7 @@
     {
       "id": 1,
       "title": "Round 1 — Opening",
-      "read_aloud": "Welcome to Lalbagh Botanical Garden! It’s August 31st, two weeks after the close of our Independence Day Flower Show and its Western Ganga dynasty displays. But a crime has taken place. Basavanna, our local socialite and gossip blogger, has vanished near the lake path—leaving behind only a broken black umbrella and a spilled tumbler of filter coffee. The culprit is standing in this circle right now.\n\nOpen your envelopes. Go around the circle, introduce your character, and state where you claim to have been at 3:30 PM today."
+      "read_aloud": "Welcome to Lalbagh Botanical Garden! It’s August 31st, two weeks after the close of our Independence Day Flower Show and its Western Ganga dynasty displays. But a crime has taken place. Basavanna, our local socialite and gossip blogger, has vanished near the lake path—leaving behind only a broken black umbrella and a spilled tumbler of filter coffee. The culprit is standing in this circle right now.\n\nOpen your envelopes. Go around the circle, introduce your character, and state where you claim to have been at 10:00 AM today."
     },
     {
       "id": 2,
@@ -172,7 +172,7 @@
     {
       "id": 3,
       "title": "Round 3 — The Final Reveal",
-      "read_aloud": "Time is up! The Inspector from the local police station just radioed in the official forensics report:\n\n'Basavanna was attacked behind the storage shed with a curved fruit-cutting sickle stolen from the fruit stall crates.\n\nFurthermore, evidence reveals Basavanna was carrying a Deccan Herald retrospective on famous Bangalore criminals published on the 26th anniversary of Veerappan kidnapping Rajkumar. That article exposed the true face of the Gandhinagar Diamond Smuggler—who carries a distinct skull tattoo on their right wrist!'\n\nBefore we name the killer, let's clear up our suspicious park visitors:\n\nThe NRI Investor was spotted sneaking out of their car to hide a metal briefcase of illegal land deeds underneath an unattended fruit cart.\n\nThe Botanist was caught hiding garden shears in a hollowed-out tree trunk after destroying smuggled orchids.\n\nThe Coordinator was locking the shed to hide broken Western Ganga display materials.\n\nNone of them committed the attack. Only ONE person was seen being confronted over the Deccan Herald article at a fruit cart, had an unattended stall at 3:30 PM, and wears a tight cloth wrap around their right wrist to hide their criminal tattoo: The Tender Coconut Vendor!"
+      "read_aloud": "Time is up! The Inspector from the local police station just radioed in the official forensics report:\n\n'Basavanna was attacked behind the storage shed with a curved fruit-cutting sickle stolen from the fruit stall crates.\n\nFurthermore, evidence reveals Basavanna was carrying a Deccan Herald retrospective on famous Bangalore criminals published on the 26th anniversary of Veerappan kidnapping Rajkumar. That article exposed the true face of the Gandhinagar Diamond Smuggler—who carries a distinct skull tattoo on their right wrist!'\n\nBefore we name the killer, let's clear up our suspicious park visitors:\n\nThe NRI Investor was spotted sneaking out of their car to hide a metal briefcase of illegal land deeds underneath an unattended fruit cart.\n\nThe Botanist was caught hiding garden shears in a hollowed-out tree trunk after destroying smuggled orchids.\n\nThe Coordinator was locking the shed to hide broken Western Ganga display materials.\n\nNone of them committed the attack. Only ONE person was seen being confronted over the Deccan Herald article at a fruit cart, had an unattended stall at 10:00 AM, and wears a tight cloth wrap around their right wrist to hide their criminal tattoo: The Tender Coconut Vendor!"
     }
   ],
   "accusation_steps": [
