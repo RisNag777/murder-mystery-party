@@ -57,6 +57,7 @@ All content lives under `data/` as JSON (no database):
 | `characters.json` | Lalbagh character & clue matrix (20 roles) |
 | `host_script.json` | Host cheat sheet and round scripts |
 
-Background image: `assets/lalbagh-glass-house.png` (also served from `static/`)
+Background image: `static/lalbagh-glass-house.png`  
+Character portraits: `static/character_images/`
 
 Replace the story by editing `characters.json` and `host_script.json`.
