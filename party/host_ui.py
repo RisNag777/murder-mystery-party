@@ -206,7 +206,7 @@ def _guests_tab() -> None:
     st.markdown("#### Guest links")
     st.caption(
         "Share each guest their access code or append it to your Streamlit URL, "
-        f"e.g. `http://localhost:8501/?code=CAMP-XXXX`. "
+        f"e.g. `http://localhost:8501/?code=XXXX`. "
         f"(Configured server address hint: `{_base_url()}`)"
     )
     link_rows = []

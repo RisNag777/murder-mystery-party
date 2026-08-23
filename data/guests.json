@@ -1,22 +1,122 @@
 [
-  {"name": "Gisha", "access_code": "CAMP-A1B2", "player_id": 1, "attending": true},
-  {"name": "Ankush", "access_code": "CAMP-C3D4", "player_id": 2, "attending": true},
-  {"name": "Vivek", "access_code": "CAMP-E5F6", "player_id": 3, "attending": true},
-  {"name": "Ajay", "access_code": "CAMP-G7H8", "player_id": 4, "attending": true},
-  {"name": "Shruti", "access_code": "CAMP-I9J0", "player_id": 5, "attending": true},
-  {"name": "Shriya", "access_code": "CAMP-K1L2", "player_id": 6, "attending": true},
-  {"name": "Gautham", "access_code": "CAMP-M3N4", "player_id": 7, "attending": true},
-  {"name": "Shreya", "access_code": "CAMP-O5P6", "player_id": 8, "attending": true},
-  {"name": "Rohit", "access_code": "CAMP-Q7R8", "player_id": 9, "attending": true},
-  {"name": "Anusha", "access_code": "CAMP-S9T0", "player_id": 10, "attending": true},
-  {"name": "Abhinaya", "access_code": "CAMP-U1V2", "player_id": 11, "attending": true},
-  {"name": "Chaitrali", "access_code": "CAMP-W3X4", "player_id": 12, "attending": true},
-  {"name": "Naresh", "access_code": "CAMP-Y5Z6", "player_id": 13, "attending": true},
-  {"name": "Nidhi", "access_code": "CAMP-A7B8", "player_id": 14, "attending": true},
-  {"name": "Amber", "access_code": "CAMP-C9D0", "player_id": 15, "attending": true},
-  {"name": "Sachin", "access_code": "CAMP-E1F2", "player_id": 16, "attending": true},
-  {"name": "Tanmay", "access_code": "CAMP-G3H4", "player_id": 17, "attending": true},
-  {"name": "Santosh", "access_code": "CAMP-I5J6", "player_id": 18, "attending": true},
-  {"name": "Rajita", "access_code": "CAMP-K7L8", "player_id": 19, "attending": true},
-  {"name": "Suresh", "access_code": "CAMP-M9N0", "player_id": 20, "attending": true}
+  {
+    "name": "Gisha",
+    "access_code": "5TAY",
+    "player_id": 1,
+    "attending": true
+  },
+  {
+    "name": "Ankush",
+    "access_code": "XLBX",
+    "player_id": 2,
+    "attending": true
+  },
+  {
+    "name": "Vivek",
+    "access_code": "D7DH",
+    "player_id": 3,
+    "attending": true
+  },
+  {
+    "name": "Ajay",
+    "access_code": "JMDR",
+    "player_id": 4,
+    "attending": true
+  },
+  {
+    "name": "Shruti",
+    "access_code": "736V",
+    "player_id": 5,
+    "attending": true
+  },
+  {
+    "name": "Shriya",
+    "access_code": "GG2G",
+    "player_id": 6,
+    "attending": true
+  },
+  {
+    "name": "Gautham",
+    "access_code": "9KC9",
+    "player_id": 7,
+    "attending": true
+  },
+  {
+    "name": "Shreya",
+    "access_code": "T3KV",
+    "player_id": 8,
+    "attending": true
+  },
+  {
+    "name": "Rohit",
+    "access_code": "46KE",
+    "player_id": 9,
+    "attending": true
+  },
+  {
+    "name": "Anusha",
+    "access_code": "EZPA",
+    "player_id": 10,
+    "attending": true
+  },
+  {
+    "name": "Abhinaya",
+    "access_code": "4AW9",
+    "player_id": 11,
+    "attending": true
+  },
+  {
+    "name": "Chaitrali",
+    "access_code": "TPF6",
+    "player_id": 12,
+    "attending": true
+  },
+  {
+    "name": "Naresh",
+    "access_code": "MVQF",
+    "player_id": 13,
+    "attending": true
+  },
+  {
+    "name": "Nidhi",
+    "access_code": "LXEC",
+    "player_id": 14,
+    "attending": true
+  },
+  {
+    "name": "Amber",
+    "access_code": "EKPN",
+    "player_id": 15,
+    "attending": true
+  },
+  {
+    "name": "Sachin",
+    "access_code": "NMYV",
+    "player_id": 16,
+    "attending": true
+  },
+  {
+    "name": "Tanmay",
+    "access_code": "HB47",
+    "player_id": 17,
+    "attending": true
+  },
+  {
+    "name": "Santosh",
+    "access_code": "PS53",
+    "player_id": 18,
+    "attending": true
+  },
+  {
+    "name": "Rajita",
+    "access_code": "F6AY",
+    "player_id": 19,
+    "attending": true
+  },
+  {
+    "name": "Suresh",
+    "access_code": "35WK",
+    "player_id": 20,
+    "attending": true
+  }
 ]

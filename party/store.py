@@ -4,7 +4,6 @@ from __future__ import annotations
 
 import json
 import secrets
-import string
 from datetime import datetime
 from pathlib import Path
 from typing import Any
@@ -107,8 +106,8 @@ def find_guest_by_code(code: str) -> dict | None:
     return None
 
 
-def generate_access_code(prefix: str = "CAMP") -> str:
-    alphabet = string.ascii_uppercase + string.digits
-    token = "".join(secrets.choice(alphabet) for _ in range(4))
-    token2 = "".join(secrets.choice(alphabet) for _ in range(4))
-    return f"{prefix}-{token[:2]}{token2[:2]}"
+def generate_access_code(length: int = 4) -> str:
+    """Random guest access code (no fixed prefix)."""
+    # Skip ambiguous 0/O/1/I so codes are easier to read aloud.
+    alphabet = "ABCDEFGHJKLMNPQRSTUVWXYZ23456789"
+    return "".join(secrets.choice(alphabet) for _ in range(length))

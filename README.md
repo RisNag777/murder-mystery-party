@@ -18,7 +18,7 @@ Edit `.env` and set at least `HOST_PASSWORD`.
 streamlit run app.py
 ```
 
-- **Guest portal:** open the app and enter an access code, or use `http://localhost:8501/?code=CAMP-A1B2`
+- **Guest portal:** open the app and enter an access code, or use `http://localhost:8501/?code=XXXX`
 - **Host dashboard:** choose Host in the sidebar and sign in with `HOST_PASSWORD`
 
 ## Deploy to Streamlit Community Cloud
