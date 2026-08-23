@@ -10,7 +10,9 @@ from typing import Any
 
 ROOT_DIR = Path(__file__).resolve().parent.parent
 DATA_DIR = ROOT_DIR / "data"
-CHARACTER_IMAGES_DIR = ROOT_DIR / "assets" / "character_images"
+# Served by Streamlit static file serving (see .streamlit/config.toml).
+CHARACTER_IMAGES_DIR = ROOT_DIR / "static" / "character_images"
+CHARACTER_IMAGES_URL_PREFIX = "./app/static/character_images"
 
 
 def _path(name: str) -> Path:
@@ -94,16 +96,6 @@ def set_guest_note(access_code: str, text: str) -> None:
     save_guest_notes(notes)
 
 
-def character_by_id(player_id: int | None) -> dict | None:
-    if player_id is None:
-        return None
-    deck = load_characters()
-    for char in deck.get("characters", []):
-        if char.get("player_id") == player_id:
-            return char
-    return None
-
-
 def character_image_paths(char: dict) -> list[Path]:
     """Resolve on-disk paths for a character's portrait image(s)."""
     names = char.get("images") or []
@@ -115,6 +107,33 @@ def character_image_paths(char: dict) -> list[Path]:
         if path.is_file():
             paths.append(path)
     return paths
+
+
+def character_image_urls(char: dict) -> list[str]:
+    """Public static URLs for character portraits (Streamlit Cloud-friendly)."""
+    names = char.get("images") or []
+    if isinstance(names, str):
+        names = [names]
+    urls: list[str] = []
+    for name in names:
+        path = CHARACTER_IMAGES_DIR / str(name)
+        if path.is_file():
+            urls.append(f"{CHARACTER_IMAGES_URL_PREFIX}/{name}")
+    return urls
+
+
+def character_by_id(player_id: int | None) -> dict | None:
+    if player_id is None:
+        return None
+    try:
+        player_id = int(player_id)
+    except (TypeError, ValueError):
+        return None
+    deck = load_characters()
+    for char in deck.get("characters", []):
+        if char.get("player_id") == player_id:
+            return char
+    return None
 
 
 def find_guest_by_code(code: str) -> dict | None:

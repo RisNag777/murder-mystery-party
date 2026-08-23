@@ -7,10 +7,10 @@ from urllib.parse import urlencode
 import pandas as pd
 import streamlit as st
 
+from party.media import show_character_images
 from party.settings import get_setting
 from party.store import (
     character_by_id,
-    character_image_paths,
     generate_access_code,
     load_characters,
     load_event,
@@ -232,7 +232,21 @@ def _characters_tab() -> None:
         st.markdown(f"- {rule}")
 
     guests = {g.get("player_id"): g for g in load_guests() if g.get("player_id")}
-    for char in deck.get("characters", []):
+    characters = deck.get("characters", [])
+
+    st.markdown("#### Portraits")
+    # Show all portraits in a grid so they are visible without opening expanders.
+    per_row = 4
+    for i in range(0, len(characters), per_row):
+        row = characters[i : i + per_row]
+        cols = st.columns(per_row)
+        for col, char in zip(cols, row):
+            with col:
+                show_character_images(char, width=160)
+                st.caption(char.get("title", ""))
+
+    st.markdown("#### Cards")
+    for char in characters:
         pid = char["player_id"]
         guest = guests.get(pid)
         label = char["title"]
@@ -241,15 +255,7 @@ def _characters_tab() -> None:
         if guest:
             label += f"  · assigned to {guest.get('name')}"
         with st.expander(label, expanded=False):
-            paths = character_image_paths(char)
-            if paths:
-                if len(paths) == 1:
-                    st.image(str(paths[0]), use_container_width=True)
-                else:
-                    cols = st.columns(len(paths))
-                    for col, path in zip(cols, paths):
-                        with col:
-                            st.image(str(path), use_container_width=True)
+            show_character_images(char, width=280)
             st.markdown(f"**Role:** {char.get('role')}")
             st.markdown(f"**Type:** {char.get('type')}")
             if char.get("secret_motive"):
