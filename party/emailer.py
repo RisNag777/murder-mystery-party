@@ -2,17 +2,18 @@
 
 from __future__ import annotations
 
-import os
 import smtplib
 from email.message import EmailMessage
+
+from party.settings import get_setting
 
 
 def smtp_configured() -> bool:
     return bool(
-        os.getenv("SMTP_HOST")
-        and os.getenv("SMTP_FROM")
-        and os.getenv("SMTP_USER")
-        and os.getenv("SMTP_PASSWORD")
+        get_setting("SMTP_HOST")
+        and get_setting("SMTP_FROM")
+        and get_setting("SMTP_USER")
+        and get_setting("SMTP_PASSWORD")
     )
 
 
@@ -29,15 +30,15 @@ def send_announcement_email(
     if not smtp_configured():
         return (
             False,
-            "SMTP is not configured. Set SMTP_HOST, SMTP_PORT, SMTP_USER, "
-            "SMTP_PASSWORD, and SMTP_FROM in .env — announcement was still saved in-app.",
+            "SMTP is not configured. Set SMTP_* in .env (local) or Streamlit Secrets "
+            "(Cloud) — announcement was still saved in-app.",
         )
 
-    host = os.environ["SMTP_HOST"]
-    port = int(os.getenv("SMTP_PORT", "587"))
-    user = os.environ["SMTP_USER"]
-    password = os.environ["SMTP_PASSWORD"]
-    from_addr = os.environ["SMTP_FROM"]
+    host = get_setting("SMTP_HOST")
+    port = int(get_setting("SMTP_PORT", "587") or "587")
+    user = get_setting("SMTP_USER")
+    password = get_setting("SMTP_PASSWORD")
+    from_addr = get_setting("SMTP_FROM")
 
     msg = EmailMessage()
     msg["Subject"] = subject

@@ -2,7 +2,6 @@
 
 from __future__ import annotations
 
-import os
 from pathlib import Path
 
 import streamlit as st
@@ -10,6 +9,7 @@ from dotenv import load_dotenv
 
 from party.guest_ui import render_guest
 from party.host_ui import render_host, require_host_login
+from party.settings import get_setting
 from party.theme import apply_background
 
 load_dotenv(Path(__file__).resolve().parent / ".env")
@@ -41,7 +41,7 @@ def main() -> None:
     )
 
     if mode == "Host dashboard":
-        password = os.getenv("HOST_PASSWORD", "")
+        password = get_setting("HOST_PASSWORD", "")
         if require_host_login(password):
             if st.sidebar.button("Sign out"):
                 st.session_state.host_authenticated = False
